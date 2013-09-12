@@ -1,28 +1,32 @@
 lpo
 ===
 
-Least P*ss Off
+Least P*ss Off - a Decision making tool
 
 A Project for the ZHAW school
 
-Constantin Lazari
+**Build-Tool:**
+Maven 3
 
-Marco Wettstein
+**Contributors:**
+
+* Constantin Lazari
+
+* Marco Wettstein
 
 
 ## Howto install
 
-1.) clone the repository locally:
+1. clone the repository locally: 
+`$ git clone https://github.com/macrozone/lpo`
 
-git clone https://github.com/macrozone/lpo
+
+2. import the existing maven project into your eclipse workspace
+
+3. to run your project, cd into your project root folder:
+`$ cd lpo`
+
+4. ... and execute:
+`$ mvn clean install`
 
 
-2.) import the existing maven project into your eclipse workspace
-
-3.) to run your project, cd into your project root folder:
-
-cd lpo
-
-4.) ... and execute:
-
-mvn clean install

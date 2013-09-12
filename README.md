@@ -1,4 +1,7 @@
 lpo
 ===
 
-Least Piss Off
+Least P*ss Off
+
+A Project for the ZHAW school
+

@@ -1,7 +1,7 @@
 # Themenübersicht
 
 
-Als User möchte ich mir einen Überblick über vorhandene, offene Probleme und deren Stand verschaffen können.
+Als Problemsteller möchte ich mir einen Überblick über vorhandene, offene Probleme und deren Stand verschaffen können.
 
 **Priorität:** 6
 

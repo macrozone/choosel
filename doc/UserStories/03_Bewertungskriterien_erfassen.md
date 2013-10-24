@@ -1,7 +1,7 @@
 # Bewertungskriterien erfassen
 
 
-Als möchte ich individuelle Bewertungskriterien für mögliche Problemlösungen erfassen können.
+Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problemlösungen erfassen können.
 
 
 **Priorität:** 3

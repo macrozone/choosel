@@ -1,7 +1,7 @@
 # Lösungen bewerten
 
 
-Als User möchte ich alle Lösungsvarianten für ein bestimmtes Problem nach meinen Individuellen Kriterien bewerten können, 
+Als Bewerter möchte ich alle Lösungsvarianten für ein bestimmtes Problem nach meinen Individuellen Kriterien bewerten können, 
 um die für mich beste Lösung zu finden.
 
 **Priorität:** 5

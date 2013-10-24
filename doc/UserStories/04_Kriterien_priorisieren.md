@@ -1,7 +1,7 @@
 # Kriterien priorisieren
 
 
-Als User möchte ich meine Individuellen Kriterien priorisieren um sie unterschiedlich zu gewichten.
+Als Bewerter möchte ich meine Individuellen Kriterien priorisieren um sie unterschiedlich zu gewichten.
 
 **Priorität:** 4
 

@@ -8,7 +8,7 @@ A Project for the ZHAW school
 **Build-Tool:**
 Maven 3
 
-**Contributors:**
+**Team:**
 
 * Constantin Lazari
 

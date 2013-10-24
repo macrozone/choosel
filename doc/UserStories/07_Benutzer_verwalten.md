@@ -1,8 +1,8 @@
 # Benutzer verwalten
 
 
-Als Problemsteller möchte ich Leute zum Bewerten einladen können.
+Als Problemsteller möchte ich Leute zum Bewerten einladen können um Fremde von der Bewertung auszuschliessen.
 
-**Priorität:** 5
+**Priorität:** 7
 
-**Schätzung:** 5
+**Schätzung:** 8

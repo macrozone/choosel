@@ -5,6 +5,17 @@ indented code is real program code, but everything here is normal markdown
 See http://coffeescript.org/#literate
 
 
+## Handlebar helpers
+Handlebars is a template language and meteor's default one, 
+see http://handlebarsjs.com/
+
+you can register helper functions
+this example here just logs something and can be used like this
+
+{{log problem}}
+
+then, the template-var problem will be logged in the console
+
 
 	Handlebars.registerHelper 'log', (data) -> console.log data
 

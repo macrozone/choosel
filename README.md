@@ -1,7 +1,7 @@
-lpo
+Choosel
 ===
 
-Least P*ss Off - a Decision making tool
+aka LPO - Least P*ss Off - a Decision making tool
 
 A Project for the ZHAW school
 
@@ -10,23 +10,16 @@ Maven 3
 
 **Team:**
 
-* Constantin Lazari
+* Tobias Rees
 
 * Marco Wettstein
 
+* Idea: Constantin Lazari 
 
 ## Howto install
 
 1. clone the repository locally: 
-`$ git clone https://github.com/macrozone/lpo`
+`$ git clone https://github.com/macrozone/choosel`
 
-
-2. import the existing maven project into your eclipse workspace
-
-3. to run your project, cd into your project root folder:
-`$ cd lpo`
-
-4. ... and execute:
-`$ mvn clean install`
 
 

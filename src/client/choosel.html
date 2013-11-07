@@ -1,0 +1,85 @@
+<head>
+	<title>choosel</title>
+</head>
+
+<body>
+<!-- mini-pages'job -->
+</body>
+
+
+<!-- this is the default layout-->
+<template name="layout">
+	<a href="/">home</a>
+  {{{yield}}}
+</template>
+
+<template name="homeLayout">
+	<h1>Choosel</h1>
+  {{{yield}}}
+</template>
+
+
+
+<template name="home">
+	{{> createProblem}}
+	{{> allProblems}}
+</template>
+
+<template name="createProblem">
+	<div class="createProblem">
+		<h2>Describe your problem!</h2>
+		<input type="text" placeholder="title" class="title" />
+		<br />
+		<textarea class="description" placeholder="description"></textarea>
+		<br />
+		<button class="save">Save</button>
+	</div>
+</template>
+
+
+<template name="allProblems">
+	<h2>All problems</h2>
+	<ul>
+	{{#each problems}}
+		<li>
+			<a href="/problem/{{_id}}">{{title}}</a>
+		</li>
+	{{/each}}
+	</ul>
+</template>
+
+<template name="notFound">
+<p>the page could not be found</p>
+</template>
+
+<template name="problem">
+
+<h2>{{problem.title}}</h2>
+<p>{{problem.description}}</p>
+</template>
+
+<template name="solutions">
+
+<ul>
+{{#each solutions}}
+	<li>{{title}}</li>
+{{/each}}
+</ul>
+</template>
+
+<template name="addSolution">
+<div class="addSolution">
+		<h1>Your solution?</h1>
+		<input type="text" placeholder="title" class="title" />
+		<br />
+		<textarea class="description" placeholder="description"></textarea>
+		<br />
+		<button class="save">Save</button>
+	</div>
+</template>
+
+<template name="problemPage">
+{{>problem}}
+{{>addSolution}}
+{{>solutions}}
+</template>

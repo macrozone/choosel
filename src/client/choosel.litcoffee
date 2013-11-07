@@ -1,5 +1,5 @@
 # Choosel main client code file
-this is a [litertate-coffe-script](http://coffeescript.org/#literate) file!
+this is a [literate-coffe-script](http://coffeescript.org/#literate) file!
 
 indented code is real program code ([coffeescript](coffeescript.org)), but everything here is normal markdown.
 

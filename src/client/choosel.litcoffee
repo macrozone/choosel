@@ -7,9 +7,7 @@ indented code is real program code ([coffeescript](coffeescript.org)), but every
 ## Handlebar helpers
 [Handlebars](http://handlebarsjs.com/) is a template language and meteor's default one.
 
-You can register helper functions
-
-
+You can register helper functions like this:
 
 	Handlebars.registerHelper 'log', (data) -> console.log data
 

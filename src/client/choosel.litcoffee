@@ -1,23 +1,23 @@
 # Choosel main client code file
-this is a litertate-coffe-script file!
+this is a [litertate-coffe-script](http://coffeescript.org/#literate) file!
 
-indented code is real program code, but everything here is normal markdown
-See http://coffeescript.org/#literate
+indented code is real program code ([coffeescript](coffeescript.org)), but everything here is normal markdown.
 
 
 ## Handlebar helpers
-Handlebars is a template language and meteor's default one, 
-see http://handlebarsjs.com/
+[Handlebars](http://handlebarsjs.com/) is a template language and meteor's default one.
 
-you can register helper functions
+You can register helper functions
+
+
+
+	Handlebars.registerHelper 'log', (data) -> console.log data
+
 this example here just logs something and can be used like this
 
 {{log problem}}
 
 then, the template-var problem will be logged in the console
-
-
-	Handlebars.registerHelper 'log', (data) -> console.log data
 
 			
 ## page routes and init functions

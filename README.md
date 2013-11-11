@@ -5,7 +5,7 @@ aka LPO - Least P*ss Off - a Decision making tool
 A Project for the ZHAW school
 
 
-## Literate-Story-Programming
+## "Literate-Story-Programming"
 
 I've known [coffescript](http://coffeescript.org/) for a while and stumbled accross the concept of
 [literate Programming](http://de.wikipedia.org/wiki/Literate_programming), 

@@ -15,8 +15,11 @@ See
 
 ## Client
 
-	if Meteor.isClient
+The following indented code is client code.
+We could put them in a folder "client", but we try to let this project as flat as possible 
+with code distributed to stories. Because we might later need server code, we'd like to have them in the same place
 
+	if Meteor.isClient
 
 ### Handlebar helpers
 [Handlebars](http://handlebarsjs.com/) is a template language and meteor's default one.
@@ -34,7 +37,6 @@ then, the template-var problem will be logged in the console
 	
 	
 		
-
 
 ### Router init, 
 

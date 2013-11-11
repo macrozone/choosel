@@ -4,15 +4,13 @@ aka LPO - Least P*ss Off - a Decision making tool
 
 A Project for the ZHAW school
 
-## Framework
-Simple ideas need simple code - we now use [meteor](http://www.meteor.com/)!
-
-Code is written in [coffescript](http://coffeescript.org/), 
-most written in [Literate coffescript](http://coffeescript.org/#literate), 
-so code is commented with markdown. 
 
 ## Literate-Story-Programming
-We came up with the idea to merge to concept of literate-programming with stories from agile programming.
+
+I've known [coffescript](http://coffeescript.org/) for a while and stumbled accross the concept of
+[literate Programming](http://de.wikipedia.org/wiki/Literate_programming), 
+which is supported by coffeescript with [Literate coffescript](http://coffeescript.org/#literate).
+So I came up with the idea to merge to concept of literate-programming with stories from agile programming.
 
 We distribute code not in modules, but in story-cards! The application code is *in* the story-Cards.
 
@@ -39,6 +37,14 @@ html-files and css files, that belong to a story are named like this:
 storyX.html, storyX.css, etc.
 
 images and other assets will be under /public
+
+## Framework
+Simple ideas need simple code - we now use [meteor](http://www.meteor.com/)!
+
+Code is written in [coffescript](http://coffeescript.org/), 
+most written in [Literate coffescript](http://coffeescript.org/#literate), 
+so code is commented with markdown. 
+
 
 ## Team
 

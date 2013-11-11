@@ -38,18 +38,3 @@ anderen zu teilen.
 			Problems.findOne _id: Session.get 'problemID'
 
 
-#### Lösung zu Problem erfassen
-
-		Template.solutions.solutions = ->
-			Solutions.find {problemID: Session.get('problemID')}, sort: title: 1
-
-		Template.addSolution.events = 
-			"click .save": ->
-				
-				title = $(".addSolution .title").val()
-				description = $(".addSolution .description").val()
-				Solutions.insert problemID: Session.get('problemID'), title: title, description: description
-
-		
-
-		

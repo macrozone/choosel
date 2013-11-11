@@ -31,11 +31,11 @@
 </template>
 
 
+<!-- changed in story 2 
 <template name="problemPage">
 	{{>problem}}
-	{{>addSolution}}
-	{{>solutions}}
 </template>
+-->
 
 <template name="problem">
 	<h2>The Problem: </h2>
@@ -43,26 +43,6 @@
 	<p>{{problem.description}}</p>
 </template>
 
-<template name="addSolution">
-	<div class="addSolution">
-		<h2>Your solution?</h2>
-		<input type="text" placeholder="title" class="title" />
-		<br />
-		<textarea class="description" placeholder="description"></textarea>
-		<br />
-		<button class="save">Save</button>
-	</div>
-</template>
-
-<template name="solutions">
-	<h2>Solutions:</h2>
-	<dl>
-		{{#each solutions}}
-		<dt>{{title}}</dt>
-		<dd>{{description}}</dd>
-		{{/each}}
-	</dl>
-</template>
 
 
 

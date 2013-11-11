@@ -1,0 +1,33 @@
+<!-- HTML Template for Story 2 -->
+
+<!-- took from story 1 and edited -->
+<template name="problemPage">
+	{{>problem}}
+	{{>addSolution}}
+	{{>solutions}}
+</template>
+
+
+<template name="addSolution">
+	<div class="addSolution">
+		<h2>Your solution?</h2>
+		<input type="text" placeholder="title" class="title" />
+		<br />
+		<textarea class="description" placeholder="description"></textarea>
+		<br />
+		<button class="save">Save</button>
+	</div>
+</template>
+
+<template name="solutions">
+	<h2>Solutions:</h2>
+	<dl>
+		{{#each solutions}}
+		<dt>{{title}}</dt>
+		<dd>{{description}}</dd>
+		{{/each}}
+	</dl>
+</template>
+
+
+

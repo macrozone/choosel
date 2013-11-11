@@ -58,11 +58,24 @@ storyX.html, storyX.css, etc.
 
 images and other assets will be under /public
 
-## Framework
-Simple ideas need simple code - we now use [meteor](http://www.meteor.com/)!
+## [meteor](http://www.meteor.com/)
+Because simple ideas need simple code.
 
 Meteor has a lot of simple approaches to organize code wich helps us with this concept of literate-story-programming. 
 
+It also abstracts away the border between client and server code (at least mostly). 
+
+### Unit Tests & Integration Tests
+
+Official Meteor Unit-Test-System is on the Roadmap, but not available yet.
+
+But there are some Systems already available:
+
+- [RTD](http://xolvio.github.io/rtd/) - Unit Tests and Acceptance Tests, 
+runs automatically in the background and will update itself when you change a file.
+- [Laika](http://arunoda.github.io/laika/)
+
+We will add such a system in one of the next Iterations.
 
 ## Team
 

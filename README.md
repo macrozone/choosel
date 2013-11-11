@@ -1,21 +1,36 @@
-Choosel
-===
+# Choosel
 
 aka LPO - Least P*ss Off - a Decision making tool
 
 A Project for the ZHAW school
 
-**Build-Tool:**
-~~Maven 3~~
-
+## Framework
 Simple ideas need simple code - we now use [meteor](http://www.meteor.com/)!
 
 Code is written in [coffescript](http://coffeescript.org/), 
 most written in [Literate coffescript](http://coffeescript.org/#literate), 
 so code is commented with markdown. 
 
-See [this file](https://github.com/macrozone/choosel/blob/master/src/client/choosel.litcoffee) for an example. 
-It's real program-code!
+## Literate-Story-Programming
+We came up with the idea to merge to concept of literate-programming with stories from agile programming.
+
+We distribute code not in modules, but in story-cards! The application code is *in* the story-Cards.
+
+Need to check the progress for a story? Simply open the storycard and verify the code.
+
+Want to define tasks for a story? Put some headings and comments in your story card. 
+The task can be done by writing the code directly where you defined your task.
+
+### Story 0
+The story 0 card contains code that is setup code and is shared across different stories. 
+If you need to adjust code in story 0, add a commet in your story card.
+
+### additional assets
+html-files and css files, that belong to a story are named like this:
+
+storyX.html, storyX.css, etc.
+
+
 
 **Team:**
 

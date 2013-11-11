@@ -38,6 +38,8 @@ html-files and css files, that belong to a story are named like this:
 
 storyX.html, storyX.css, etc.
 
+images and other assets will be under /public
+
 ## Team
 
 * Tobias Rees

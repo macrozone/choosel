@@ -7,6 +7,8 @@ Maybe there will be an "Epilogue" too ;-)
 
 ## global Collections
 
+The @ is a shortcut for "this", this in this context is the global (package) scope.
+
 	@Problems = new Meteor.Collection "problems"
 	@Solutions = new Meteor.Collection "solutions"
 

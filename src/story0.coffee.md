@@ -1,6 +1,8 @@
-# Story 0: General Setup
+# Story 0: The "Prologue"
 
-This is the setup-file that contains code for every Story.
+This is the setup-file that contains code for every Story. It is the "Prologue" of our application
+
+Maybe there will be an "Epilogue" too ;-)
 
 
 ## global Collections

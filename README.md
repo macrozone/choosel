@@ -21,8 +21,9 @@ Need to check the progress for a story? Simply open the storycard and verify the
 Want to define tasks for a story? Put some headings and comments in your story card. 
 The task can be done by writing the code directly where you defined your task.
 
-### Story 0
-The [story 0](src/story0.coffee.md) card contains code that is setup code and is shared across different stories. 
+### Stories
+#### [story 0](src/story0.coffee.md) 
+This story card card contains code that is setup code and is shared across different stories. 
 If you need to adjust code in story 0, add a commet in your story card.
 
 ### additional assets
@@ -30,7 +31,9 @@ html-files and css files, that belong to a story are named like this:
 
 storyX.html, storyX.css, etc.
 
+#### [story 1](src/story1.coffee.md) 
 
+#### [story 2](src/story2.coffee.md) 
 
 ## Team
 

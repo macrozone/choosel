@@ -8,8 +8,10 @@ anderen zu teilen.
 **Priorität:** 1
 
 
-
 ## Client
+
+assets:
+- [story1.html](story1.html)
 	
 	if Meteor.isClient
 	

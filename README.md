@@ -33,6 +33,7 @@ If you need to adjust code in story 0, add a commet in your story card.
 
 #### [story 2](src/story2.coffee.md) 
 
+more (all) stories will be put here later.
 
 
 ### additional assets

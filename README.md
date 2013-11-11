@@ -9,7 +9,8 @@ A Project for the ZHAW school
 
 I've known [coffescript](http://coffeescript.org/) for a while and stumbled accross the concept of
 [literate Programming](http://de.wikipedia.org/wiki/Literate_programming), 
-which is supported by coffeescript with [Literate coffescript](http://coffeescript.org/#literate).
+which is supported by coffeescript with 
+[Literate coffescript](http://coffeescript.org/#literate) - a mix of coffescript code and markdown comments.
 
 So I came up with the idea to merge to concept of literate-programming with stories from agile programming.
 

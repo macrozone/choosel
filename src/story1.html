@@ -1,26 +1,8 @@
-<head>
-	<title>choosel</title>
-</head>
-
-<body>
-<!-- mini-pages'job -->
-</body>
-
-
-<!-- this is the default layout-->
-<template name="layout">
-	<a href="/">home</a>
-  {{{yield}}}
-</template>
-
-<template name="homeLayout">
-	<h1>Choosel</h1>
-  {{{yield}}}
-</template>
+<!-- HTML Template for Story 1 -->
 
 
 
-<template name="home">
+<template name="homePage">
 	{{> createProblem}}
 	{{> allProblems}}
 </template>
@@ -40,36 +22,30 @@
 <template name="allProblems">
 	<h2>All problems</h2>
 	<ul>
-	{{#each problems}}
+		{{#each problems}}
 		<li>
 			<a href="/problem/{{_id}}">{{title}}</a>
 		</li>
-	{{/each}}
+		{{/each}}
 	</ul>
 </template>
 
-<template name="notFound">
-<p>the page could not be found</p>
+
+<template name="problemPage">
+	{{>problem}}
+	{{>addSolution}}
+	{{>solutions}}
 </template>
 
 <template name="problem">
-
-<h2>{{problem.title}}</h2>
-<p>{{problem.description}}</p>
-</template>
-
-<template name="solutions">
-
-<ul>
-{{#each solutions}}
-	<li>{{title}}</li>
-{{/each}}
-</ul>
+	<h2>The Problem: </h2>
+	<h3>{{problem.title}}</h3>
+	<p>{{problem.description}}</p>
 </template>
 
 <template name="addSolution">
-<div class="addSolution">
-		<h1>Your solution?</h1>
+	<div class="addSolution">
+		<h2>Your solution?</h2>
 		<input type="text" placeholder="title" class="title" />
 		<br />
 		<textarea class="description" placeholder="description"></textarea>
@@ -78,8 +54,15 @@
 	</div>
 </template>
 
-<template name="problemPage">
-{{>problem}}
-{{>addSolution}}
-{{>solutions}}
+<template name="solutions">
+	<h2>Solutions:</h2>
+	<dl>
+		{{#each solutions}}
+		<dt>{{title}}</dt>
+		<dd>{{description}}</dd>
+		{{/each}}
+	</dl>
 </template>
+
+
+

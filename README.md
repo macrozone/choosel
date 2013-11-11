@@ -23,6 +23,18 @@ Need to check the progress for a story? Simply open the storycard and verify the
 Want to define tasks for a story? Put some headings and comments in your story card. 
 The task can be done by writing the code directly where you defined your task.
 
+### Things to consider
+Let's see if this approach will work successfully throughout the whole project. 
+
+Of course it needs the code to be simple and the stories well defined. 
+If you need to adjust previous stories in order to make your current story work, it might not be well defined.
+
+Also, the maintainability of the project may be decreased. On the other hand, you will find
+code very easy, if you know which story to edit.
+
+Code that is too long or complicated for a story should be put in it's own module / package / project anyway, 
+but that won't be the case in this particlar project.
+
 ### Stories
 #### [story 0](src/story0.coffee.md) 
 This story card card contains code that is setup code and is shared across different stories. 

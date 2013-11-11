@@ -19,10 +19,13 @@ See
 
 
 ### Handlebar helpers
-Handlebars is a template language and meteor's default one, 
-see http://handlebarsjs.com/
+[Handlebars](http://handlebarsjs.com/) is a template language and meteor's default one.
 
-you can register helper functions
+You can register helper functions like this: 
+		
+		Handlebars.registerHelper 'log', (data) -> console.log data
+
+
 this example here just logs something and can be used like this
 
 {{log problem}}
@@ -30,10 +33,13 @@ this example here just logs something and can be used like this
 then, the template-var problem will be logged in the console
 	
 	
-		Handlebars.registerHelper 'log', (data) -> console.log data
+		
 
 
-### Router init
+### Router init, 
+
+uses [mini-pages](ttps://github.com/cmather/meteor-mini-pages)
 
 Define Routes in every Story
+		
 		@Router = new Meteor.PageRouter

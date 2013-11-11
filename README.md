@@ -18,10 +18,13 @@ So I came up with the idea to merge to concept of literate-programming with stor
 
 We distribute code not in modules, but in story-cards! The application code is *in* the story-Cards.
 
+Regard the application like a book, with Chapters and Subchapters. A User-Story whould therefore be a Chapter, 
+and a Task a Subchapter.
+
 Need to check the progress for a story? Simply open the storycard and verify the code.
 
 Want to define tasks for a story? Put some headings and comments in your story card. 
-The task can be done by writing the code directly where you defined your task.
+The task can be done by writing the code directly where you defined your task - as a Subchapter.
 
 ### Things to consider
 Let's see if this approach will work successfully throughout the whole project. 

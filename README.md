@@ -4,13 +4,15 @@ aka LPO - Least P*ss Off - a Decision making tool
 
 A Project for the ZHAW school
 
-
-## Literate-Story-Programming
-
 I've known [coffescript](http://coffeescript.org/) for a while and stumbled accross the concept of
 [literate Programming](http://de.wikipedia.org/wiki/Literate_programming), 
 which is supported by coffeescript with [Literate coffescript](http://coffeescript.org/#literate).
+
 So I came up with the idea to merge to concept of literate-programming with stories from agile programming.
+
+## Literate-Story-Programming
+
+
 
 We distribute code not in modules, but in story-cards! The application code is *in* the story-Cards.
 
@@ -41,9 +43,7 @@ images and other assets will be under /public
 ## Framework
 Simple ideas need simple code - we now use [meteor](http://www.meteor.com/)!
 
-Code is written in [coffescript](http://coffeescript.org/), 
-most written in [Literate coffescript](http://coffeescript.org/#literate), 
-so code is commented with markdown. 
+Meteor has a lot of simple approaches to organize code wich helps us with this concept of literate-story-programming. 
 
 
 ## Team

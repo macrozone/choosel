@@ -26,14 +26,17 @@ The task can be done by writing the code directly where you defined your task.
 This story card card contains code that is setup code and is shared across different stories. 
 If you need to adjust code in story 0, add a commet in your story card.
 
-### additional assets
-html-files and css files, that belong to a story are named like this:
-
-storyX.html, storyX.css, etc.
 
 #### [story 1](src/story1.coffee.md) 
 
 #### [story 2](src/story2.coffee.md) 
+
+
+
+### additional assets
+html-files and css files, that belong to a story are named like this:
+
+storyX.html, storyX.css, etc.
 
 ## Team
 

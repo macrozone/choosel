@@ -23,9 +23,10 @@ anderen zu teilen.
 
 ### Template functions
 
+#### Entscheidungsproblem erfassen
+
 		Template.createProblem.events = 
 			"click .save": ->
-
 				title = $(".createProblem .title").val()
 				description = $(".createProblem .description").val()
 				Problems.insert title: title, description: description
@@ -35,6 +36,9 @@ anderen zu teilen.
 
 		Template.problem.problem = ->
 			Problems.findOne _id: Session.get 'problemID'
+
+
+#### Lösung zu Problem erfassen
 
 		Template.solutions.solutions = ->
 			Solutions.find {problemID: Session.get('problemID')}, sort: title: 1

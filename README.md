@@ -2,7 +2,9 @@
 
 aka LPO - Least P*ss Off - a Decision making tool
 
-A Project for the ZHAW school
+A Project for the ZHAW school.
+
+Current state: http://choosel.macrozone.ch/
 
 
 ## "Literate-Story-Programming"

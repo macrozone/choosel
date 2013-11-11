@@ -9,7 +9,13 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 **Schätzung:** 3
 
 
+
 ## Client
+
+### assets
+- [story2.html](story2.html)
+
+### Code
 
 	if Meteor.isClient
 

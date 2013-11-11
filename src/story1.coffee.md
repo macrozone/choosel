@@ -10,9 +10,11 @@ anderen zu teilen.
 
 ## Client
 
-assets:
+### assets
 - [story1.html](story1.html)
-	
+
+### Code
+
 	if Meteor.isClient
 	
 		initProblem = (page)->
@@ -23,7 +25,7 @@ assets:
 			'/problem/:_id': to: 'problemPage', before: [initProblem]
 
 
-### Template functions
+
 
 #### Entscheidungsproblem erfassen
 

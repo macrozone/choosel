@@ -1,9 +1,13 @@
-# Story 0: General Setup
+# Story 0: The "Prologue"
 
-This is the setup-file that contains code for every Story.
+This is the setup-file that contains code for every Story. It is the "Prologue" of our application
+
+Maybe there will be an "Epilogue" too ;-)
 
 
 ## global Collections
+
+The @ is a shortcut for "this", this in this context is the global (package) scope.
 
 	@Problems = new Meteor.Collection "problems"
 	@Solutions = new Meteor.Collection "solutions"

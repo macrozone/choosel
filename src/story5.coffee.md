@@ -60,6 +60,9 @@ r = sum (r_i) / sum(weight_i)
 
 verify this calculation ;-)
 
+## Task
+
+save rating to the solution-collection (update solution)
 
 
 

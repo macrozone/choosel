@@ -10,12 +10,13 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 
 
 
-## Client
 
-### assets
+
+## assets
 - [story2.html](story2.html)
 
-### Code
+
+## Client
 
 	if Meteor.isClient
 

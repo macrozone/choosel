@@ -23,16 +23,14 @@ Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problem
 
 create new template or page where a visitor set his criterias
 
-		 Template.criterias.criterias = ->
-                        Criterias.find {criteriaID: Session.get('criteriaID')}, sort: title: 1
+			Template.criterias.criterias = ->
+				Criterias.find {criteriaID: Session.get('criteriaID')}, sort: title: 1
 
 	                Template.addCriteria.events =
-                        "click .save": ->
-
-                                title = $(".addCriteria .criteria").val()
-				radio =  $(".addCriteria .radio").val()
-				criteriaID: Session.get('criteriaID'), title: title, radio: radio
-				Session.set("criteriaID", "test");	
+				"click .save": ->
+					title = $(".addCriteria .criteria").val()
+					radio =  $(".addCriteria .radio").val()
+					criteriaID: Session.get('criteriaID'), title: title, radio: radio
 
 ## Task 
 
@@ -45,7 +43,7 @@ store criterias
 criterias can be volatile for the moment, we do not have to store them in a collection.
 But we should store them in Session.
 
-
+				Session.set("criteriaID", "test");
 
 
 

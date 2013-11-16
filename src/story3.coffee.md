@@ -8,11 +8,31 @@ Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problem
 
 **Schätzung:** 3
 
+## assets
+- [story3.html](story3.html)
+
+
+## Client
+
+	if Meteor.isClient
+
+
 
 
 ## Task
 
 create new template or page where a visitor set his criterias
+
+		 Template.criterias.criterias = ->
+                        Criterias.find {criteriaID: Session.get('criteriaID')}, sort: title: 1
+
+	                Template.addCriteria.events =
+                        "click .save": ->
+
+                                title = $(".addCriteria .criteria").val()
+				radio =  $(".addCriteria .radio").val()
+				criteriaID: Session.get('criteriaID'), title: title, radio: radio
+				Session.set("criteriaID", "test");	
 
 ## Task 
 

@@ -103,7 +103,7 @@ We will add such a system in one of the next Iterations.
 2. clone the repository locally: 
 `$ git clone https://github.com/macrozone/choosel`
 
-3. Install `$ nodejs-legacy`, if haven't it, because `$ mrt` needs it to run correct
+3. Install `nodejs-legacy`, if haven't it, because `mrt` needs it to run correct
 
 4. `$ cd choosel/src`
 

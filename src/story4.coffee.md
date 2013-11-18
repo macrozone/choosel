@@ -23,8 +23,14 @@ create template to edit weights for the criterias of [story3](story3.coffee.md)
 		Template.criteriaPage.criteria = ->
 			["bla", "blubb", "blubber"]
 
-	
+		Template.criteriaPage.rendered = ->
+			$(".criteriaPage .weightSlider").slider min: 1, max: 10
+
+		$ ->
+			$(".weightSlider").on "slide", (event, ui) ->
+				console.log ui
 		Template.criteriaPage.events = 
+			
 			"blur input.weight": (event)->
 			
 				console.log $(event.target).val()

@@ -1,12 +1,13 @@
 <template name="oneWeight">
 
-	{{this}}: <div class="weightSlider"></div><br />
+	{{name}}: <span class="label">{{weight}}</span><div class="weightSlider"></div><br />
 
 </template>
 
 <template name="criteriaPage">
 <div class="criteriaPage">
 <a href="..">back</a>
+
 <h2>Edit your criteria:</h2>
 <div class="criteria">
 	{{#each criteria}}

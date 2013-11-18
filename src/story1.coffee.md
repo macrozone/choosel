@@ -8,12 +8,13 @@ anderen zu teilen.
 **Priorität:** 1
 
 
-## Client
 
-### assets
+
+## assets
 - [story1.html](story1.html)
 
-### Code
+
+## define routes for pages
 
 	if Meteor.isClient
 	
@@ -27,7 +28,7 @@ anderen zu teilen.
 
 
 
-#### Entscheidungsproblem erfassen
+## Entscheidungsproblem erfassen
 
 		Template.createProblem.events = 
 			"click .save": ->

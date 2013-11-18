@@ -31,7 +31,6 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 
 		Template.addSolution.events = 
 			"click .save": ->
-				
 				title = $(".addSolution .title").val()
 				description = $(".addSolution .description").val()
 				Solutions.insert problemID: Session.get('problemID'), title: title, description: description

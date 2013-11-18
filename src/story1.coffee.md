@@ -22,7 +22,7 @@ anderen zu teilen.
 			Session.set 'problemID', page.params._id
 
 		@Router.pages
-			'/': to: 'homePage', as: 'root', layout: "homeLayout"
+			'/': to: 'homePage', as: 'root'
 			'/problem/:_id': to: 'problemPage', before: [initProblem]
 
 

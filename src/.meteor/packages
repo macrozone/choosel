@@ -10,3 +10,6 @@ preserve-inputs
 coffeescript
 jquery
 mini-pages
+jquery-ui
+jquery-ui-bootstrap
+bootstrap

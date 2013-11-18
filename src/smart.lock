@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "mini-pages": {}
+      "mini-pages": {},
+      "jquery-ui": {}
     },
     "packages": {
       "mini-pages": {
         "git": "https://github.com/cmather/meteor-mini-pages.git",
         "tag": "v0.3.2",
         "commit": "4d885ffb6d0108ee2e47a13a6296c98a2f7b5059"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
       },
       "HTML5-History-API": {
         "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",

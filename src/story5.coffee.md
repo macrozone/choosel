@@ -121,7 +121,7 @@ verify this calculation ;-)
 save rating to the solution-collection (update solution)
 
 		Template.solutionPage.events =
-			"click .save" ->
+			"click .save": ->
 
 				currentSolution = Solutions.findOne _id: Session.get "solutionID"
 

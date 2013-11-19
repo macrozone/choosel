@@ -77,6 +77,9 @@ radio-buttons are ok too (keep it simple!)
 				$(element).slider min:0, max:100, value: 50
 
 
+				$(element).on "slide", (event, ui) =>
+					$(this.find(".label")).text ui.value+"%"
+
 
 
 ## Task

@@ -56,7 +56,7 @@ The page shows every criteria (stored in Session
 from [story3](story3.coffee.md) and [story4](story4.coffee.md))
 
 
-		Template.criteriaListNoSlider.criteria = ->
+		Template.criteriaListWithRatings.criteria = ->
 			criteria.find {problemID: Session.get "problemID"}
 
 
@@ -69,6 +69,8 @@ this should be done with a slider (from 0% to 100% fullfilled, may have steps)
 radio-buttons are ok too (keep it simple!)
 
 --> reuse weightSlider
+
+
 
 		Template.solutionScoreSlider.rendered = ->
 			criterium = this.data
@@ -99,9 +101,24 @@ calculate the result
 
 r = sum (r_i) / sum(weight_i)
 
+		Template.totalScore.score = -> 
+			Session.get "totalScore"
 
 
-
+		Template.criteriaListWithRatings.rendered = ->
+			$elements = $(this.findAll(".scoreSlider"))
+			numberOfCriteria = $elements.length
+			saveRating = ->
+				sumWeight = 0 
+				sumScore = 0
+				$elements.each (index, element) =>
+					weight = $(element).data "weight"
+					sumWeight += weight
+					score = $(element).slider("option", "value")
+					sumScore += score*weight/100
+				totalScore = sumScore / sumWeight
+				Session.set "totalScore", totalScore
+			$(this.find(".scoreSlider")).on "slide", saveRating 
 ## Task
 
 verify this calculation ;-)

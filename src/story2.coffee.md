@@ -42,3 +42,7 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 				description = $(".addSolution .description").val()
 				Solutions.insert problemID: Session.get('problemID'), title: title, description: description
 
+do not forget to empty the fields after saving
+				
+				$(".addSolution .title").val ""
+				$(".addSolution .description").val ""

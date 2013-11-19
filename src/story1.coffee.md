@@ -36,6 +36,12 @@ anderen zu teilen.
 				description = $(".createProblem .description").val()
 				Problems.insert title: title, description: description
 
+empty the fields afterwards
+				
+				$(".createProblem .title").val ""
+				$(".createProblem .description").val ""
+
+
 		Template.allProblems.problems = ->
 			Problems.find()
 

@@ -1,0 +1,32 @@
+<!-- HTML Template for Story 3 -->
+
+<!-- took from story 2 and edited -->
+<template name="solutionsPage">
+	{{>solutions}}
+        {{>criterias}}
+	{{>addCriteria}}
+</template>
+
+<template name="addCriteria">
+	<div class="addCriteria">
+		<h2>Your Criteria?</h2>
+		<input type="text" placeholder="criteria" class="criteria" />
+		<br/>
+		<input type="radio" name="scoring" value="male">bad
+		<input type="radio" name="scoring" value="female">not good
+		<input type="radio" name="scoring" value="female">good
+		<input type="radio" name="scoring" value="female">best
+		<br/>
+		<button class="save">Save</button>
+	</div>
+</template>
+
+<template name="criterias">
+	<h2>Criteria:</h2>
+	<dl>
+		{{#each criterias}}
+		<dt>{{criteria}}</dt>
+		<dd>{{radio}}</dd>
+		{{/each}}
+	</dl>
+</template>

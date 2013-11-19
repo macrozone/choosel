@@ -19,6 +19,14 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 ## Client
 
 	if Meteor.isClient
+		
+		initSolutions = (page)->
+			Session.set 'solutionsID', page.params._id
+
+		@Router.pages
+			'/': to: 'homePage', as: 'root', layout: "homeLayout"
+			'/solutions/:_id': to: 'solutionsPage', before: [initSolutions]
+
 
 
 ### Template functions
@@ -34,3 +42,4 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 				title = $(".addSolution .title").val()
 				description = $(".addSolution .description").val()
 				Solutions.insert problemID: Session.get('problemID'), title: title, description: description
+

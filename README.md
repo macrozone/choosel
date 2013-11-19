@@ -103,13 +103,15 @@ We will add such a system in one of the next Iterations.
 2. clone the repository locally: 
 `$ git clone https://github.com/macrozone/choosel`
 
-3. `$ cd choosel/src`
+3. Install `nodejs-legacy`, if haven't it, because `mrt` needs it to run correct
 
-4. execute `$ mrt` to install the needed packages
+4. `$ cd choosel/src`
 
-5. execute `mrt` or `meteor` to run the app in development mode
+5. execute `$ mrt` to install the needed packages
 
-6. goto http://localhost:3000
+6. execute `mrt` or `meteor` to run the app in development mode
+
+7. goto http://localhost:3000
 
 
 

@@ -5,18 +5,24 @@
 </head>
 
 <body>
-<!-- mini-pages'job -->
+	<!-- mini-pages'job -->
 </body>
 
 
 <!-- this is the default layout-->
 <template name="layout">
-	<a href="/">home</a>
-  {{{yield}}}
-</template>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				
+				<a class="home" href="/">Choosel</a>
+			</div>
+		</div>
+	</div>
 
-<template name="homeLayout">
-	<h1>Choosel</h1>
-  {{{yield}}}
+	<div class="container">
+
+		{{{yield}}}
+	</div>
 </template>
 

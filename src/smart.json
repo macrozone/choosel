@@ -1,5 +1,7 @@
 {
   "packages": {
-    "mini-pages": {}
+    "mini-pages": {},
+    "jquery-ui": {},
+    "jquery-ui-bootstrap": {}
   }
 }

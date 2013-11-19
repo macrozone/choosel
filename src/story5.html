@@ -5,6 +5,7 @@
 
 	<h3>Rate this solution with your criteria:</h3>
 	{{>criteriaListNoSlider}}
+	{{>rateSaveButton}}
 </template>
 
 <!-- consider using this also in story2 -->
@@ -14,6 +15,9 @@
 	<p>{{solution.description}}</p>
 </template>
 
+<template name="rateSaveButton">
+	<button class="save">Save Rate</button>
+</template>
 
 <template name="emptyCriteriaMessage">
 	<p>you haven't defined any criterias yet for this problem. <a href="../criteria/">You can define them here</a>
@@ -38,9 +42,7 @@
 
 
 	<span class="label">{{rating}}</span>
-	<div class="scoreSlider"><br>
-	<button class="save">Save Rate</button>
-	</div>
+	<div class="scoreSlider"></div>
 	<span class="label">{{rating}}</span>
 	<div class="scoreSlider"></div>
 

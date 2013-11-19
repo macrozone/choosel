@@ -75,7 +75,7 @@ radio-buttons are ok too (keep it simple!)
 			INITIAL_SCORE = 50
 
 			setLabelByValue = (value) =>
-				$(this.find(".label")).text value+"%"
+				$(this.find(".label")).text value+"% fullfilled"
 
 			setLabelByValue INITIAL_SCORE
 

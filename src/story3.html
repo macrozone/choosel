@@ -4,7 +4,7 @@
 <template name="criteriaPage">
 	<a href=".." class="btn btn-small"><i class="icon-arrow-left"></i> Back to problem</a>
 	{{>problemSnippet}}
-    {{>criteriaList}}
+	{{>criteriaList}}
 	{{>addCriteria}}
 </template>
 
@@ -18,10 +18,12 @@
 
 <template name="criteriaList">
 	<h3>Criteria for your decision:</h3>
-	<dl>
+	<ol>
 		{{#each criteria}}
-		<dt>{{title}}</dt>
-		<dd>Weight: {{>weightSlider this}}</dd>
+		<li>
+			<strong>{{title}}</strong>, 
+			<span>weight: {{>weightSlider this}}</span>
+		</li>
 		{{/each}}
-	</dl>
+	</ol>
 </template>

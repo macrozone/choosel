@@ -2,17 +2,18 @@
 
 <!-- took from story 1 and edited -->
 <template name="problemPage">
-	{{>problem}}
-	{{>addSolution}}
+	{{>problemSnippet}}
 	<a href="criteria/">Edit your criteria</a>
+
 	{{>solutions}}
+	{{>addSolution}}
 
 </template>
 
 
 <template name="addSolution">
 	<div class="addSolution">
-		<h2>Your solution?</h2>
+		<h3>Add a solution:</h3>
 		<input type="text" placeholder="title" class="title" />
 		<br />
 		<textarea class="description" placeholder="description"></textarea>

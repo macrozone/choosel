@@ -18,6 +18,7 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 
 
 
+
 ## assets
 - [story2.html](story2.html)
 
@@ -53,7 +54,6 @@ save Data if ok
 
 				else 
 					Solutions.insert problemID: Session.get('problemID'), title: title, description: description
-
 
 do not forget to empty the fields after saving
 				

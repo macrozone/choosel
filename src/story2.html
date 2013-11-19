@@ -25,13 +25,12 @@
 
 <template name="solutions">
 	<h2>Solutions:</h2>
-	<dl>
+	<ol>
 		{{#each solutions}}
-		<dt><a href="./solutions/{{_id}}">{{title}}</a></dt>
-		<dt>{{title}}</dt>
-		<dd>{{description}}</dd>
+		<li><a href="./solutions/{{_id}}">{{title}}</a>: {{description}}</li>
+
 		{{/each}}
-	</dl>
+	</ol>
 </template>
 
 

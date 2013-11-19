@@ -8,6 +8,14 @@ Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problem
 
 **Schätzung:** 3
 
+
+## Akzeptanzkriterien:
+
+- eingegebene Daten sind an User / Besucher gebunden und können nicht von anderen gesehen werden.
+- leere eingaben werden abgefangen
+- eingegeben Kriterien gilten nur für ein konkretes Problem
+
+
 ## assets
 - [story3.html](story3.html)
 
@@ -47,9 +55,15 @@ create new template or page where a visitor set his criterias
 				"click .save": ->
 					title = $(".addCriteria .criteria").val()
 
-					criterium = title: title, weight: 5, problemID: Session.get "problemID"
-					criteria.insert criterium
-					$(".addCriteria .criteria").val ""
+validate
+					
+					if title.length <= 0
+						alert "please set a name for the criterium"
+					else
+
+						criterium = title: title, weight: 5, problemID: Session.get "problemID"
+						criteria.insert criterium
+						$(".addCriteria .criteria").val ""
 
 
 ## Task 

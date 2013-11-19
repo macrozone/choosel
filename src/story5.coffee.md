@@ -71,17 +71,16 @@ radio-buttons are ok too (keep it simple!)
 --> reuse weightSlider
 
 		Template.solutionScoreSlider.rendered = ->
-
+			criterium = this.data
 			INITIAL_SCORE = 50
+
 			setLabelByValue = (value) =>
 				$(this.find(".label")).text value+"%"
 
-			criterium = this.data
-
 			setLabelByValue INITIAL_SCORE
+
 			$(this.find(".scoreSlider")).each (index, element) =>
 				$(element).slider min:0, max:100, value: INITIAL_SCORE
-
 				$(element).on "slide", (event, ui) =>
 					setLabelByValue ui.value
 					

@@ -24,7 +24,6 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 			Session.set 'solutionsID', page.params._id
 
 		@Router.pages
-			'/': to: 'homePage', as: 'root', layout: "homeLayout"
 			'/solutions/:_id': to: 'solutionsPage', before: [initSolutions]
 
 

@@ -38,7 +38,7 @@ anderen zu teilen.
 		Template.allProblems.problems = ->
 			Problems.find()
 
-		Template.problem.problem = ->
+		Template.problemSnippet.problem = ->
 			Problems.findOne _id: Session.get 'problemID'
 
 

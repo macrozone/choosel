@@ -8,6 +8,14 @@ anderen zu teilen.
 **Priorität:** 1
 
 
+## Akzeptanzkriterien:
+
+- eingegebene Daten bleiben persistent nach neuladen der Seite
+- andere Nutzer können diese Daten sehen
+- Fehleingaben werden abgefangen (leere Felder)
+- Formular ist leer nach eingabe
+
+
 
 
 ## assets
@@ -34,12 +42,21 @@ anderen zu teilen.
 			"click .save": ->
 				title = $(".createProblem .title").val()
 				description = $(".createProblem .description").val()
-				Problems.insert title: title, description: description
+
+validate fields
+
+				if title.length <= 0 or description.length <= 0
+					alert "please set title and description"
+
+save Data if ok
+
+				else 
+					Problems.insert title: title, description: description
 
 empty the fields afterwards
 				
-				$(".createProblem .title").val ""
-				$(".createProblem .description").val ""
+					$(".createProblem .title").val ""
+					$(".createProblem .description").val ""
 
 
 		Template.allProblems.problems = ->

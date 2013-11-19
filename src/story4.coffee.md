@@ -32,6 +32,8 @@ fill with test data
 		Template.criteriaPage.criteria= -> criteria.find {}
 			
 
+## Task
+store these weights to the criterias
 
 		Template.oneWeight.rendered = ->
 
@@ -46,5 +48,3 @@ fill with test data
 		
 
 
-## Task
-store these weights to the criterias

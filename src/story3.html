@@ -16,11 +16,11 @@
 </template>
 
 <template name="criteriaList">
-	<h3>Criteria:</h3>
+	<h3>Criteria for your decision:</h3>
 	<dl>
 		{{#each criteria}}
 		<dt>{{title}}</dt>
-		<dd>Weight: {{weight}}</dd>
+		<dd>Weight: {{>weightSlider this}}</dd>
 		{{/each}}
 	</dl>
 </template>

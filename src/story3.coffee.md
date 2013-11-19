@@ -25,7 +25,7 @@ But we should store them in Session.
 
 create a local criteria collection
 
-		criteria = new Meteor.Collection
+		@criteria = new Meteor.Collection
 		
 
 
@@ -41,7 +41,7 @@ create new template or page where a visitor set his criterias
 
 
 			Template.criteriaList.criteria = ->
-				criteria.find {problemID: Session.get "problemID"}, sort: weight: -1
+				criteria.find {problemID: Session.get "problemID"}
 
 			Template.addCriteria.events =
 				"click .save": ->

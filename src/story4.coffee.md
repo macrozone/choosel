@@ -21,9 +21,10 @@ create template to edit weights for the criterias of [story3](story3.coffee.md)
 
 
 	
-		Template.oneWeight.rendered = ->
+		Template.weightSlider.rendered = ->
 
 			criterium = this.data
+			console.log this
 			$(this.find(".weightSlider")).each (index, element) =>
 				$(element).slider min:1, max:10, value: criterium.weight 
 				$(element).on "slide", (event, ui) =>

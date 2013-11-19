@@ -12,7 +12,6 @@ um die für mich beste Lösung zu finden.
 
 	if Meteor.isClient
 
-
 ## Task
 
 create a new Page 
@@ -20,6 +19,7 @@ create a new Page
 		initSolutionPage = (page) ->
 			Session.set "problemID", page.params.problemID
 			Session.set "solutionID", page.params.solutionID
+			Session.set "totalScore", 0
 
 		@Router.pages
 			"/problem/:problemID/solutions/:solutionID": to: "solutionPage", before: [initSolutionPage]
@@ -119,6 +119,17 @@ verify this calculation ;-)
 ## Task
 
 save rating to the solution-collection (update solution)
+
+		Template.solutionPage.events =
+			"click .save" ->
+
+				currentSolution = Solutions.findOne _id: Session.get "solutionID"
+
+				scores = currentSolution.scores
+				scores = [] unless scores?
+				scores.push Session.get "totalScore"
+
+				Solutions.update {_id: Session.get "solutionID"}, $set: scores: scores
 
 
 

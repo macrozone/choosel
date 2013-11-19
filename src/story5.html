@@ -4,8 +4,14 @@
 	{{>solutionSnippet}}
 
 	<h3>Rate this solution with your criteria:</h3>
+<<<<<<< HEAD
 	{{>criteriaListNoSlider}}
 	{{>rateSaveButton}}
+=======
+	{{>criteriaListWithRatings}}
+	{{>totalScore}}
+	<button class="save btn btn-primary"><i class="icon-white icon-ok"></i> Save your rating</button>
+>>>>>>> aba3f897809f5a213a7a745532a2d037f68e7c5d
 </template>
 
 <!-- consider using this also in story2 -->
@@ -23,13 +29,14 @@
 	<p>you haven't defined any criterias yet for this problem. <a href="../criteria/">You can define them here</a>
 	</p>
 </template>
-<template name="criteriaListNoSlider">
+<template name="criteriaListWithRatings">
 
 
 	<dl>
 		{{#each criteria}}
 		<dt>{{title}}</dt>
-		<dd>Weight: {{weight}}, your score: {{>solutionScoreSlider this}}</dd>
+		<dd>Weight: {{weight}}, your score: 
+		{{>solutionScoreSlider this}}</dd>
 		{{else}}
 			{{>emptyCriteriaMessage}}
 		{{/each}}
@@ -37,6 +44,10 @@
 
 </template>
 
+
+<template name="totalScore">
+<p>the score for this solution is {{score}}</p>
+</template>
 
 <template name="solutionScoreSlider">
 

@@ -27,7 +27,14 @@
 	<h2>Solutions:</h2>
 	<ol>
 		{{#each solutions}}
-		<li><a href="./solutions/{{_id}}">{{title}}</a>: {{description}}</li>
+		{{log this}}
+		
+		{{#if userRating}}
+		<li>{{title}}: {{description}} <em>, your rating:</em> <span class="badge badge-success">{{userRating}}</span></li>
+		{{else}}
+			<li><a href="./solutions/{{_id}}">{{title}}</a>: {{description}}</li>
+		{{/if}}
+	
 
 		{{/each}}
 	</ol>

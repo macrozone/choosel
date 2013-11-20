@@ -76,16 +76,19 @@ radio-buttons are ok too (keep it simple!)
 			criterium = this.data
 			INITIAL_SCORE = 50
 
-			setLabelByValue = (value) =>
-				$(this.find(".label")).text value+"% fullfilled"
+			$element = $(this.find(".scoreSlider"))
 
-			setLabelByValue INITIAL_SCORE
+			setScore = (value) =>
+				$element.data "score", value
+				$(this.find(".badge")).text value+"% fullfilled"
 
-			$(this.find(".scoreSlider")).each (index, element) =>
-				$(element).slider min:0, max:100, value: INITIAL_SCORE
-				$(element).on "slide", (event, ui) =>
-					setLabelByValue ui.value
-					
+			setScore INITIAL_SCORE
+
+			$element.data "weight", criterium.weight
+			$element.slider min:0, max:100, value: INITIAL_SCORE
+			$element.on "slide", (event, ui) =>
+				setScore ui.value
+				
 
 
 
@@ -102,23 +105,25 @@ calculate the result
 r = sum (r_i) / sum(weight_i)
 
 		Template.totalScore.score = -> 
-			Session.get "totalScore"
+			Math.round Session.get "totalScore"
 
 
 		Template.criteriaListWithRatings.rendered = ->
-			$elements = $(this.findAll(".scoreSlider"))
-			numberOfCriteria = $elements.length
-			saveRating = ->
+
+			saveRatingInSession = =>
 				sumWeight = 0 
 				sumScore = 0
+				$elements = $(this.findAll(".scoreSlider"))
 				$elements.each (index, element) =>
 					weight = $(element).data "weight"
 					sumWeight += weight
-					score = $(element).slider("option", "value")
-					sumScore += score*weight/100
+					score = $(element).data "score"
+					sumScore += score*weight
 				totalScore = sumScore / sumWeight
 				Session.set "totalScore", totalScore
-			$(this.find(".scoreSlider")).on "slide", saveRating 
+			$(this.findAll(".scoreSlider")).on "slide", saveRatingInSession 
+			# execute once
+			saveRatingInSession()
 
 ## Task
 
@@ -128,17 +133,19 @@ verify this calculation ;-)
 
 save rating to the solution-collection (update solution)
 
-		Template.solutionPage.events =
+		Template.criteriaListWithRatings.events =
 			"click .save": ->
 
 				currentSolution = Solutions.findOne _id: Session.get "solutionID"
-
+				solutionsRated = Session.get "solutionsRated"
+				solutionsRated = {} unless solutionsRated?
 				scores = currentSolution.scores
 				scores = [] unless scores?
 				scores.push Session.get "totalScore"
-
+				solutionsRated[Session.get("solutionID")] = Session.get "totalScore"
+				Session.set "solutionsRated", solutionsRated
 				Solutions.update {_id: Session.get "solutionID"}, $set: scores: scores
-
+				Meteor.go "/problem/"+(Session.get "problemID")+"/"
 
 
 

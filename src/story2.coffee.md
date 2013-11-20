@@ -38,7 +38,19 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 ### Lösung zu Problem erfassen
 
 		Template.solutions.solutions = ->
-			Solutions.find {problemID: Session.get('problemID')}, sort: title: 1
+			cursor = Solutions.find {problemID: Session.get('problemID')}, sort: title: 1
+
+add already rated solution-scores from story5
+			
+			solutionsRated = Session.get "solutionsRated"
+			solutions = []
+			cursor.forEach (solution)->
+				
+				if solutionsRated?
+					solution.userRating = solutionsRated[solution._id]
+				solutions.push solution
+
+			solutions
 
 		Template.addSolution.events = 
 			"click .save": ->

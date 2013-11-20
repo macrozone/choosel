@@ -3,15 +3,12 @@
 	{{>problemSnippet}}
 	{{>solutionSnippet}}
 
-	<h3>Rate this solution with your criteria:</h3>
-<<<<<<< HEAD
-	{{>criteriaListNoSlider}}
-	{{>rateSaveButton}}
-=======
+	<h4>Rate this solution with your criteria:</h4>
+
 	{{>criteriaListWithRatings}}
-	{{>totalScore}}
-	<button class="save btn btn-primary"><i class="icon-white icon-ok"></i> Save your rating</button>
->>>>>>> aba3f897809f5a213a7a745532a2d037f68e7c5d
+	
+
+
 </template>
 
 <!-- consider using this also in story2 -->
@@ -21,9 +18,7 @@
 	<p>{{solution.description}}</p>
 </template>
 
-<template name="rateSaveButton">
-	<button class="save">Save Rate</button>
-</template>
+
 
 <template name="emptyCriteriaMessage">
 	<p>you haven't defined any criterias yet for this problem. <a href="../criteria/">You can define them here</a>
@@ -31,30 +26,36 @@
 </template>
 <template name="criteriaListWithRatings">
 
+{{#if criteria.count}}
+
 
 	<dl>
 		{{#each criteria}}
 		<dt>{{title}}</dt>
 		<dd>Weight: {{weight}}, your score: 
 		{{>solutionScoreSlider this}}</dd>
-		{{else}}
-			{{>emptyCriteriaMessage}}
+		
 		{{/each}}
 	</dl>
+	{{>totalScore}}
+	<button class="save btn btn-primary"><i class="icon-white icon-ok"></i> Save your rating</button>
+	
+	{{else}}
+		{{>emptyCriteriaMessage}}
+	{{/if}}
 
 </template>
 
 
 <template name="totalScore">
-<p>the score for this solution is {{score}}</p>
+<p><strong>the score for this solution is <span class="badge badge-success">{{score}}</span> of 100</p></strong>
 </template>
 
 <template name="solutionScoreSlider">
 
 
-	<span class="label">{{rating}}</span>
+	<span class="badge badge-success">{{rating}}</span>
 	<div class="scoreSlider"></div>
-	<span class="label">{{rating}}</span>
-	<div class="scoreSlider"></div>
+	
 
 </template>

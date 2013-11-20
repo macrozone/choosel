@@ -7,6 +7,12 @@ Als Bewerter möchte ich meine Individuellen Kriterien priorisieren um sie unter
 
 **Schätzung:** 3
 
+## Akzeptanzkriterien:
+
+**Kriterium "Priosierung der Bewertungskriterien"**<br>
+Situation: Es existieren erfasste Bewertungskriterien pro Problem<br>
+Aktion: Jedes Bewertungskriterium kann für das ganze Problem gewichtet werden<br>
+Erwartetes Ergebnis: Gewichtung der Bewertungskriterien werden pro Problem gespeichert und ist in den Problemlösungen sichtbar
 
 ## assets
 - [story4.html](story4.html)

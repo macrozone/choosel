@@ -41,7 +41,7 @@ Code that is too long or complicated for a story should be put in it's own modul
 but that won't be the case in this particlar project.
 
 ### Stories
-#### [story 0](src/story0.coffee.md) 
+#### [story 0, "the prologue"](src/story0.coffee.md) 
 This story card card contains code that is setup code and is shared across different stories. 
 If you need to adjust code in story 0, add a commet in your story card.
 
@@ -49,6 +49,12 @@ If you need to adjust code in story 0, add a commet in your story card.
 #### [story 1](src/story1.coffee.md) 
 
 #### [story 2](src/story2.coffee.md) 
+
+#### [story 3](src/story3.coffee.md) 
+
+#### [story 4](src/story4.coffee.md) 
+
+#### [story 5](src/story5.coffee.md) 
 
 more (all) stories will be put here later.
 

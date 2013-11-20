@@ -11,9 +11,15 @@ Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problem
 
 ## Akzeptanzkriterien:
 
-- eingegebene Daten sind an User / Besucher gebunden und können nicht von anderen gesehen werden.
-- leere eingaben werden abgefangen
-- eingegeben Kriterien gilten nur für ein konkretes Problem
+**Kriterium "Bewertungskriterien erfassen"**<br>
+Situation: Es existieren eine oder mehrere Bewertungskriterien pro Problem<br>
+Aktion: Bewertungskriterien können per Textfeld erfasst werden<br>
+Erwartetes Ergebnis: Bewertungskriterien werden persistent pro Problem gespeichert
+
+**Kriterium "Bewertungskriterien in Lösung sichtbar"**<br>
+Situation: Es existieren erfasste Bewertungskriterien<br>
+Aktion: Lösungen des Problems werden angesehen<br>
+Erwartetes Ergebnis: Bewertungskriterien des Problems sind in jeder Lösung sichtbar
 
 
 ## assets

@@ -9,6 +9,13 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 **Schätzung:** 3
 
 
+## Akzeptanzkriterien:
+
+- eingegebene Daten bleiben persistent nach neuladen der Seite
+- andere Nutzer können diese Daten sehen
+- Fehleingaben werden abgefangen (leere Felder)
+- Formular ist leer nach eingabe
+
 
 
 
@@ -28,10 +35,7 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 
 
 
-### Template functions
-
-
-#### Lösung zu Problem erfassen
+### Lösung zu Problem erfassen
 
 		Template.solutions.solutions = ->
 			Solutions.find {problemID: Session.get('problemID')}, sort: title: 1
@@ -40,9 +44,18 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 			"click .save": ->
 				title = $(".addSolution .title").val()
 				description = $(".addSolution .description").val()
-				Solutions.insert problemID: Session.get('problemID'), title: title, description: description
+
+validate fields
+				
+				if title.length <= 0 or description.length <= 0
+					alert "please set title and description"
+
+save Data if ok
+
+				else 
+					Solutions.insert problemID: Session.get('problemID'), title: title, description: description
 
 do not forget to empty the fields after saving
 				
-				$(".addSolution .title").val ""
-				$(".addSolution .description").val ""
+					$(".addSolution .title").val ""
+					$(".addSolution .description").val ""

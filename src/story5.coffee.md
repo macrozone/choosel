@@ -138,13 +138,17 @@ save rating to the solution-collection (update solution)
 
 				currentSolution = Solutions.findOne _id: Session.get "solutionID"
 				solutionsRated = Session.get "solutionsRated"
+				score = Math.round Session.get "totalScore"
 				solutionsRated = {} unless solutionsRated?
 				scores = currentSolution.scores
 				scores = [] unless scores?
-				scores.push Session.get "totalScore"
-				solutionsRated[Session.get("solutionID")] = Session.get "totalScore"
+				scores.push score
+				solutionsRated[Session.get("solutionID")] = score
 				Session.set "solutionsRated", solutionsRated
 				Solutions.update {_id: Session.get "solutionID"}, $set: scores: scores
+
+go back to problem page after saving
+
 				Meteor.go "/problem/"+(Session.get "problemID")+"/"
 
 

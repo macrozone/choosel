@@ -10,23 +10,25 @@ anderen zu teilen.
 
 ## Akzeptanzkriterien:
 
-**Kriterium "Entscheidungsproblem wird erfasst"**<br>
+**Kriterium "Entscheidungsproblem werden persistent erfasst"**<br>
 Situation: Es existiert ein Problem, das ein Titel und eine Beschreibung hat<br>
 Aktion: Titel und Beschreibung des Problems werden in jeweils getrennten Textfelder erfasst<br>
-Erwartetes Ergebnis: Titel und Beschreibung des Problems werden gespeichert und auf der Homepage wiedergegeben
+Erwartetes Ergebnis: Titel und Beschreibung des Problems werden persistent gespeichert und dargestellt
+
+**Kriterium  "Formular ist leer nach Eingabe"**<br>
+Situation: Problem wurde erfasst<br>
+Aktion: Save Button wurde geklickt<br>
+Erwartetes Ergebnis: Problem Formular ist wieder leer<br>
 
 **Kriterium  "Entscheidungsproblem mit anderen teilen"**<br>
-Situation: Es existiert ein Problem, das mit einem Titel und Beschreibung erfasst ist<br>
+Situation: Es existiert ein Problem, das mit einem Titel und Beschreibung erfasst worden ist<br>
 Aktion: Andere als der Erfasser können sich das Problem auch ansehen<br>
 Erwartetes Ergebnis: Titel und Beschreibung des Problems werden werden anderen auch angezeigt/dargestellt<br>
 
-- eingegebene Daten bleiben persistent nach neuladen der Seite
-- andere Nutzer können diese Daten sehen
-- Fehleingaben werden abgefangen (leere Felder)
-- Formular ist leer nach eingabe
-
-
-
+**Kriterium  "Fehleingaben werden abgefangen (leere Felder)"**<br>
+Situation: Es wird kein Titel oder Beschreibung eingegeben<br>
+Aktion: Es wird mit leeren Feldern der Save geklickt<br>
+Erwartetes Ergebnis: Popup erscheint mit Meldung, dass kein Titel bzw. Beschreibung eingeben wurde. Es wird nichts abgespeichert<br>
 
 ## assets
 - [story1.html](story1.html)

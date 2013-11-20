@@ -11,13 +11,25 @@ Als Problemsteller möchte ich Lösungsvarianten mit Metadaten für ein Problem 
 
 ## Akzeptanzkriterien:
 
-- eingegebene Daten bleiben persistent nach neuladen der Seite
-- andere Nutzer können diese Daten sehen
-- Fehleingaben werden abgefangen (leere Felder)
-- Formular ist leer nach eingabe
+**Kriterium "Lösungsvarianten werden persistent erfasst"**<br>
+Situation: Es existiert ein Lösung zu einem bestimmten Problem, das ein Titel und eine Beschreibung hat<br>
+Aktion: Titel und Beschreibung der Lösung werden in jeweils getrennten Textfelder erfasst<br>
+Erwartetes Ergebnis: Titel und Beschreibung der Lösung werden persistent gespeichert und dargestellt
 
+**Kriterium  "Formular ist leer nach Eingabe"**<br>
+Situation: Lösung wurde erfasst<br>
+Aktion: Save Button wurde geklickt<br>
+Erwartetes Ergebnis: Lösungs Formular ist wieder leer<br>
 
+**Kriterium  "Lösungsvarianten mit anderen teilen"**<br>
+Situation: Es existiert ein Lösung, das mit einem Titel und Beschreibung erfasst worden ist<br>
+Aktion: Andere als der Erfasser können sich die Lösung ansehen<br>
+Erwartetes Ergebnis: Titel und Beschreibung der Lösung werden werden anderen angezeigt/dargestellt<br>
 
+**Kriterium  "Fehleingaben werden abgefangen (leere Felder)"**<br>
+Situation: Es wird kein Titel oder Beschreibung eingegeben<br>
+Aktion: Es wird mit leeren Feldern der Save geklickt<br>
+Erwartetes Ergebnis: Popup erscheint mit Meldung, dass kein Titel bzw. Beschreibung eingeben wurde. Es wird nichts abgespeichert<br>
 
 ## assets
 - [story2.html](story2.html)

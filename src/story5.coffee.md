@@ -9,6 +9,18 @@ um die für mich beste Lösung zu finden.
 
 **Schätzung:** 5
 
+## Akzeptanzkriterien:
+
+**Kriterium "Bewertungskriterien bewerten"**<br>
+Situation: Bewertungskriterien wollen verschieden bewertet werden<br>
+Aktion: Mit einem Schieberegler (0% - 100%) wird das Bewertungskriterium bewertet<br>
+Erwartetes Ergebnis: Jede Bewertung eines Bewertungskriteriums in einer Lösung wird temporär gespeichert
+
+**Kriterium "Inviduelle Bewertungskriterien pro Lösung"**<br>
+Situation: Es existieren erfasste Bewertungskriterien pro Problem<br>
+Aktion: Bewertung eines Bewertungskriteriums wird gespeichert<br>
+Erwartetes Ergebnis: Pro Lösung ist jede Bewertung eines Bewertungskriterium unabhängig von einer anderen Lösung
+
 
 	if Meteor.isClient
 

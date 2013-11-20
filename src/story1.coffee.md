@@ -22,8 +22,8 @@ Erwartetes Ergebnis: Problem Formular ist wieder leer<br>
 
 **Kriterium  "Entscheidungsproblem mit anderen teilen"**<br>
 Situation: Es existiert ein Problem, das mit einem Titel und Beschreibung erfasst worden ist<br>
-Aktion: Andere als der Erfasser können sich das Problem auch ansehen<br>
-Erwartetes Ergebnis: Titel und Beschreibung des Problems werden werden anderen auch angezeigt/dargestellt<br>
+Aktion: Andere als der Erfasser können sich das Problem ansehen<br>
+Erwartetes Ergebnis: Titel und Beschreibung des Problems werden werden anderen angezeigt/dargestellt<br>
 
 **Kriterium  "Fehleingaben werden abgefangen (leere Felder)"**<br>
 Situation: Es wird kein Titel oder Beschreibung eingegeben<br>

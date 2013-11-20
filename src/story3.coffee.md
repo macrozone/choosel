@@ -8,6 +8,18 @@ Als Bewerter möchte ich individuelle Bewertungskriterien für mögliche Problem
 
 **Schätzung:** 3
 
+## Akzeptanzkriterien:
+
+**Kriterium "Bewertungskriterien erfassen"**<br>
+Situation: Es existieren eine oder mehrere Bewertungskriterien pro Problem<br>
+Aktion: Bewertungskriterien können per Textfeld erfasst werden<br>
+Erwartetes Ergebnis: Bewertungskriterien werden persistent pro Problem gespeichert
+
+**Kriterium "Bewertungskriterien in Lösung sichtbar"**<br>
+Situation: Es existieren erfasste Bewertungskriterien<br>
+Aktion: Lösungen des Problems werden angesehen<br>
+Erwartetes Ergebnis: Bewertungskriterien des Problems sind in jeder Lösung sichtbar
+
 ## assets
 - [story3.html](story3.html)
 

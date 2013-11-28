@@ -119,7 +119,6 @@ r = sum (r_i) / sum(weight_i)
 		Template.totalScore.score = -> 
 			Math.round Session.get "totalScore"
 
-
 		Template.criteriaListWithRatings.rendered = ->
 
 			saveRatingInSession = =>

@@ -53,7 +53,6 @@ create new template or page where a visitor set his criterias
 		@Router.pages
 			'/problem/:_id/criteria': to: 'criteriaPage', before: initCriteriaPage
 
-
 			Template.criteriaList.criteria = ->
 				criteria.find {problemID: Session.get "problemID"}
 

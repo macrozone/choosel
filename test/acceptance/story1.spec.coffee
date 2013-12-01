@@ -1,23 +1,4 @@
-
-webdriver = require 'selenium-webdriver'
-driver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: "chrome"
-	
-
-resetApp = ->
-	deferred = webdriver.promise.defer()
-	driver.get("http://localhost:8000/reset").then ->
-		deferred.resolve()
-	deferred.promise
-
-openApp = ->
-	deferred = webdriver.promise.defer()
-	driver.get("http://localhost:8000").then ->
-		deferred.resolve()
-	deferred.promise
-
-
-beforeEach ->
-	resetApp().then openApp
+{driver: driver, webdriver: webdriver, resetApp: resetApp, openApp: openApp}= require "./setup"
 
 createNewProblem = ->
 	deferred = webdriver.promise.defer();
@@ -36,8 +17,12 @@ checkListContent = ->
 	element = driver.findElement(webdriver.By.className('problemList')).getText().then deferred.resolve
 	deferred.promise
 
-describe "story1", ->
 
+
+describe "story1", ->
+	
+	beforeEach ->
+		resetApp().then openApp
 
 	it "is has empty problem list first", (done) ->
 	

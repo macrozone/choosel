@@ -1,33 +1,34 @@
-{driver: driver, webdriver: webdriver, openApp: openApp}= require "./setup"
-
-
-getSolutionContainer = ->
-	driver.findElement(webdriver.By.className("addSolution"))
-
-getTitleOfProblemPage = ->
-	deferred = webdriver.promise.defer();
-	driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
-	deferred.promise
-
-createSolution = ->
-	deferred = webdriver.promise.defer();
-	solutionTitle = "my solution"
-	solutionDescription = "this is a solution for the problem"
-	solutionContainer = getSolutionContainer()
-	
-	solutionContainer.findElement(webdriver.By.className('title')).sendKeys solutionTitle
-	solutionContainer.findElement(webdriver.By.className('description')).sendKeys solutionDescription
-	solutionContainer.findElement(webdriver.By.className("save")).click()
-	deferred.resolve()
-
-	return deferred.promise
-
+{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
 
 describe "story2", ->
 
-	it "allows user to open a page for a problem", (done) ->
+	driver = false
+	beforeEach -> runs -> waitsFor -> driver = loadDriver()
+
+
+	getSolutionContainer = ->
+		driver.findElement(webdriver.By.className("addSolution"))
+
+	getTitleOfProblemPage = ->
+		deferred = webdriver.promise.defer();
+		driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
+		deferred.promise
+
+	createSolution = ->
+		deferred = webdriver.promise.defer();
+		solutionTitle = "my solution"
+		solutionDescription = "this is a solution for the problem"
+		solutionContainer = getSolutionContainer()
 		
+		solutionContainer.findElement(webdriver.By.className('title')).sendKeys solutionTitle
+		solutionContainer.findElement(webdriver.By.className('description')).sendKeys solutionDescription
+		solutionContainer.findElement(webdriver.By.className("save")).click()
+		deferred.resolve()
+		deferred.promise
+
 	
+
+	it "allows user to open a page for a problem", (done) ->
 		element = driver.findElement(webdriver.By.className('problemList'))
 		element.findElement(webdriver.By.tagName("a")).click().then ->
 			getTitleOfProblemPage().then (title) ->
@@ -47,9 +48,3 @@ describe "story2", ->
 				expect(description).toBe ""
 				done()
 
-
-
-		
-
-		
-		

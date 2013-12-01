@@ -9,7 +9,7 @@ Current state: http://choosel.macrozone.ch/
 ## What's new?
 
 - now uses [RTD](http://xolvio.github.io/rtd/) for unittests and acceptance tests
-- has now some first acceptance tests, see [story1.spec](test/acceptance/story1.spec.coffee) and [story2.spec](test/acceptance/story2.spec.coffee)
+- has now some first acceptance tests, see [story1.spec](test/acceptance/story1.spec.litcoffee) and [story2.spec](test/acceptance/story2.spec.litcoffee) (currently the extension is litcoffee not coffee.md, coffee.md seems not to be recognized as testfiles yet)
 
 ## "Literate-Story-Programming"
 

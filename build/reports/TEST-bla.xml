@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuites>
-<testsuite name="bla" errors="0" tests="1" failures="0" time="0.007" timestamp="2013-11-28T20:37:01">
-  <testcase classname="bla" name="does bla" time="0.006"></testcase>
-</testsuite>
-</testsuites>

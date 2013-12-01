@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-<testsuite name="story1" errors="0" tests="1" failures="0" time="0.015" timestamp="2013-11-28T20:53:47">
-  <testcase classname="story1" name="lets a user create a new problem" time="0.014"></testcase>
+<testsuite name="story1" errors="0" tests="2" failures="0" time="3.465" timestamp="2013-12-01T18:35:57">
+  <testcase classname="story1" name="is has empty problem list first" time="2.78"></testcase>
+  <testcase classname="story1" name="lets a user create a new problem that is saved" time="0.683"></testcase>
 </testsuite>
 </testsuites>

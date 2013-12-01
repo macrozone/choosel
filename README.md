@@ -10,6 +10,11 @@ Current state: http://choosel.macrozone.ch/
 
 - now uses [RTD](http://xolvio.github.io/rtd/) for unittests and acceptance tests
 - has now some first acceptance tests, see [story1.spec](test/acceptance/story1.spec.litcoffee) and [story2.spec](test/acceptance/story2.spec.litcoffee) (currently the extension is litcoffee not coffee.md, coffee.md seems not to be recognized as testfiles yet)
+- you need to install some packages in order to use RTD, see the link above. Especially install the following:
+`npm i -g karma@0.8.6 phantomjs@1.9.0-6 istanbul@0.1.39 grunt-cli selenium-webdriver jasmine-node`
+- then you can run the tests with:
+`cd test/rtd/;
+./rtd`
 
 ## "Literate-Story-Programming"
 

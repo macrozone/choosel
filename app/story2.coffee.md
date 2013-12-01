@@ -81,5 +81,6 @@ save Data if ok
 
 do not forget to empty the fields after saving
 				
+
 					$(".addSolution .title").val ""
 					$(".addSolution .description").val ""

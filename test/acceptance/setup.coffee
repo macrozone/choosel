@@ -6,6 +6,18 @@ request = require('request')
 
 driver = false
 
+deleteWebdriverSession = (sessionId) ->
+    request.del {
+        url: 'http://localhost:4444/wd/hub/session/' + sessionId,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }, null
+deleteWebdriverSessions =  (sessions) ->
+    for session in sessions
+        deleteWebdriverSession session.id
+
+
 getWebdriverSessions = ->
     deferred = webdriver.promise.defer()
     request.get {

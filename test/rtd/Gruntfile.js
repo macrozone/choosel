@@ -243,14 +243,14 @@
             watch: {
                 files: [
                     '<%= basePath %>/test/unit/**/*.js',
-                    '<%= basePath %>/test/unit/**/*.coffee',
+                    '<%= basePath %>/test/unit/**/*.*coffee*',
                     '<%= basePath %>/test/rtd/lib/**/*.js',
-                    '<%= basePath %>/test/rtd/lib/**/*.coffee',
+                    '<%= basePath %>/test/rtd/lib/**/*.*coffee*',
                     '<%= basePath %>/test/acceptance/**/*.js',
-                    '<%= basePath %>/test/acceptance/**/*.coffee',
+                    '<%= basePath %>/test/acceptance/**/*.*coffee*',
                     '<%= basePath %>/test/features/**/*.js',
                     '<%= basePath %>/test/features/**/*.feature',
-                    '<%= basePath %>/test/features/**/*.coffee',
+                    '<%= basePath %>/test/features/**/*.*coffee*',
                     '<%= basePath %>/app/**/*',
                     '<%= basePath %>/app/.meteor/*',
                     '!<%= basePath %>/app/.meteor/local/**/*'

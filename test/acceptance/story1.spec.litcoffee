@@ -19,6 +19,8 @@ yasmines waitsFor can block the code until the driver is defined
 		beforeEach -> runs -> waitsFor -> driver = loadDriver()
 
 
+the tests itself, that describe this story
+
 		it "is has empty problem list first", (done) ->
 			checkListContent().then (content) ->
 				expect(content.length).toBe 0
@@ -34,7 +36,6 @@ yasmines waitsFor can block the code until the driver is defined
 		
 helper functions
 
-		# help functions
 		createNewProblem = ->
 			deferred = webdriver.promise.defer();
 			problemTitle = "my problem"

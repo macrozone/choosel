@@ -4,7 +4,9 @@ load setup code
 
 	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
 
-the tests / descriptions of the story
+##the test
+
+these are [jasmine-tests](http://pivotal.github.io/jasmine/). They read like descriptions of the story
 
 	describe "story1", ->
 
@@ -12,20 +14,21 @@ the tests / descriptions of the story
 we first need to load the driver. This looks a little bit ugly, 
 but we need to have driver defined in this scope here
 
-yasmines waitsFor can block the code until the driver is defined
+jasmines waitsFor can block the code until the driver is defined
 
 
 		driver = false
 		beforeEach -> runs -> waitsFor -> driver = loadDriver()
 
 
+
 the tests itself, that describe this story
+
 
 		it "is has empty problem list first", (done) ->
 			checkListContent().then (content) ->
 				expect(content.length).toBe 0
 				done()
-
 
 		it "lets a user create a new problem that is saved", (done) ->
 			createNewProblem().then ->
@@ -34,7 +37,7 @@ the tests itself, that describe this story
 					expect(content.length).toBeGreaterThan 0
 					done()
 		
-helper functions
+some helper functions. 
 
 		createNewProblem = ->
 			deferred = webdriver.promise.defer();

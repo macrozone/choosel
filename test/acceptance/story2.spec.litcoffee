@@ -1,10 +1,11 @@
 # Story 2
 
-load setup code
+##load setup code
 
 	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
 
-the tests
+##the tests
+
 
 	describe "story2", ->
 		driver = false
@@ -29,7 +30,7 @@ the tests
 					expect(description).toBe ""
 					done()
 
-helper functions
+##helper functions
 
 		getSolutionContainer = ->
 			driver.findElement(webdriver.By.className("addSolution"))

@@ -6,7 +6,7 @@ module.exports = {
     // RTD reduces the noise by swallowing most outputs. Here you can control this
     output: {
         debug: false,           // enables all outputs. This is also switched on if you run grunt --debug
-        appOutput: false,       // this shows the output from the 'meteor run' command
+        appOutput: true,       // this shows the output from the 'meteor run' command
         mirrorOutput: false,    // this shows the output from the 'meteor run' command on the mirror app
         karma: false            // shows Karma's output
     },

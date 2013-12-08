@@ -54,15 +54,15 @@ Erwartetes Ergebnis: Popup erscheint mit Meldung, dass kein Titel bzw. Beschreib
 
 add already rated solution-scores from story5
 			
-			solutionsRated = Session.get "solutionsRated"
 			solutions = []
 			cursor.forEach (solution)->
-				
-				if solutionsRated?
-					solution.userRating = solutionsRated[solution._id]
+				rating = Ratings.findOne solutionID: solution._id, userID: Meteor.userId()
+				if rating?
+					solution.userRating = rating.score
 				solutions.push solution
+			return solutions
 
-			solutions
+on save click...
 
 		Template.addSolution.events = 
 			"click .save": ->
@@ -74,13 +74,10 @@ validate fields
 				if title.length <= 0 or description.length <= 0
 					alert "please set title and description"
 
-save Data if ok
+save Data if ok, do not forget to empty the fields after saving
 
 				else 
 					Solutions.insert problemID: Session.get('problemID'), title: title, description: description, userID: Meteor.userId()
-
-do not forget to empty the fields after saving
-				
 
 					$(".addSolution .title").val ""
 					$(".addSolution .description").val ""

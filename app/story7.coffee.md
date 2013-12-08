@@ -21,7 +21,7 @@ we need this system also to keep track which user added which solution, this nee
 
 ~~add login system~~
 
--> meteor add accounts-ui accounts-google accounts-password accounts-facebook
+-> meteor add accounts-ui accounts-google accounts-password accounts-facebook accounts-github
 
 ## Task
 
@@ -32,7 +32,7 @@ we need this system also to keep track which user added which solution, this nee
 
 ## Task
 
-~~tory every entry in database with userID: Meteor.userId()~~
+~~store every entry in database with userID: Meteor.userId()~~
 
 -> added in story1,2,3,4,5
 
@@ -43,6 +43,6 @@ prevent non-logged-in users from editing stuff
 
 ## Task
 
-Accosiate every rating to a user
+~~Accosiate every rating to a user~~
 
 

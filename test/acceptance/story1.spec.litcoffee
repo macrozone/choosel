@@ -3,6 +3,7 @@
 load setup code
 
 	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
+	Constants = require "./constants"
 
 ##the test
 
@@ -41,8 +42,8 @@ some helper functions.
 
 		createNewProblem = ->
 			deferred = webdriver.promise.defer();
-			problemTitle = "my problem"
-			problemDescription = "this is a problem i want to solve"
+			problemTitle = Constants.PROBLEM_TITLE
+			problemDescription = Constants.PROBLEM_DESCRIPTION
 			driver.findElement(webdriver.By.className('title')).sendKeys problemTitle
 			driver.findElement(webdriver.By.className('description')).sendKeys problemDescription
 			driver.findElement(webdriver.By.className("save")).click().then deferred.resolve

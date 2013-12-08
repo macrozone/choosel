@@ -1,10 +1,10 @@
 # Story 2
 
-##load setup code
+load setup code
 
 	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
-
-##the tests
+	Constants = require "./constants"
+the tests
 
 
 	describe "story2", ->
@@ -30,7 +30,7 @@
 					expect(description).toBe ""
 					done()
 
-##helper functions
+helper functions
 
 		getSolutionContainer = ->
 			driver.findElement(webdriver.By.className("addSolution"))
@@ -46,8 +46,8 @@
 			solutionDescription = "this is a solution for the problem"
 			solutionContainer = getSolutionContainer()
 			
-			solutionContainer.findElement(webdriver.By.className('title')).sendKeys solutionTitle
-			solutionContainer.findElement(webdriver.By.className('description')).sendKeys solutionDescription
+			solutionContainer.findElement(webdriver.By.className('title')).sendKeys Constants.SOLUTION_TITLE
+			solutionContainer.findElement(webdriver.By.className('description')).sendKeys Constants.SOLUTION_DESCRIPTION
 			solutionContainer.findElement(webdriver.By.className("save")).click()
 			deferred.resolve()
 			deferred.promise

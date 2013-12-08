@@ -23,6 +23,7 @@ createUser = ->
 resetApp = ->
 	Problems.remove {}
 	Solutions.remove {}
+	Ratings.remove {}
 	Meteor.users.remove {}
 	Criteria.remove {}
 	createUser()

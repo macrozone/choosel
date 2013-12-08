@@ -43,6 +43,6 @@ prevent non-logged-in users from editing stuff
 
 ## Task
 
-Accosiate every rating to a user
+~~Accosiate every rating to a user~~
 
 

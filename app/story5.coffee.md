@@ -22,6 +22,8 @@ Aktion: Bewertung eines Bewertungskriteriums wird gespeichert<br>
 Erwartetes Ergebnis: Pro Lösung ist jede Bewertung eines Bewertungskriterium unabhängig von einer anderen Lösung
 
 
+
+
 	if Meteor.isClient
 
 ## Task
@@ -40,7 +42,7 @@ create a new Page
 
 ## Task
 
-User can click on a solution (from [story2](story2.coffee.md)), this opens this page
+~~User can click on a solution (from [story2](story2.coffee.md)), this opens this page~~
 
 --> readded link <a href="./solutions/{{_id}}">{{title}}</a>
 
@@ -143,7 +145,11 @@ verify this calculation ;-)
 
 ## Task
 
-save rating to the solution-collection (update solution)
+~~save rating to the solution-collection (update solution)~~
+
+we have now users, we create a new Ratings collection
+
+-> done in story0
 
 		Template.criteriaListWithRatings.events =
 			"click .save": ->
@@ -151,13 +157,16 @@ save rating to the solution-collection (update solution)
 				currentSolution = Solutions.findOne _id: Session.get "solutionID"
 				solutionsRated = Session.get "solutionsRated"
 				score = Math.round Session.get "totalScore"
-				solutionsRated = {} unless solutionsRated?
-				scores = currentSolution.scores
-				scores = [] unless scores?
-				scores.push score
-				solutionsRated[Session.get("solutionID")] = score
-				Session.set "solutionsRated", solutionsRated
-				Solutions.update {_id: Session.get "solutionID"}, $set: scores: scores
+
+check if this rating was already set
+
+				query = solutionID: Session.get("solutionID"), userID: Meteor.userId()
+				rating = Ratings.findOne query
+				if rating?
+					Ratings.update {_id: rating._id}, $set: score: score
+				else
+					query.score = score
+					Ratings.insert query
 
 go back to problem page after saving
 

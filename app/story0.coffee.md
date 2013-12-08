@@ -12,6 +12,7 @@ The @ is a shortcut for "this", this in this context is the global (package) sco
 	@Problems = new Meteor.Collection "problems"
 	@Solutions = new Meteor.Collection "solutions"
 	@Criteria = new Meteor.Collection "criteria"
+	@Ratings = new Meteor.Collection "ratings"
 
 ## Client
 

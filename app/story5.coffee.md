@@ -69,7 +69,7 @@ from [story3](story3.coffee.md) and [story4](story4.coffee.md))
 
 
 		Template.criteriaListWithRatings.criteria = ->
-			criteria.find {problemID: Session.get "problemID"}
+			Criteria.find {problemID: Session.get "problemID", userID: Meteor.userId()}
 
 
 ## Task
@@ -132,6 +132,7 @@ r = sum (r_i) / sum(weight_i)
 					sumScore += score*weight
 				totalScore = sumScore / sumWeight
 				Session.set "totalScore", totalScore
+
 			$(this.findAll(".scoreSlider")).on "slide", saveRatingInSession 
 			# execute once
 			saveRatingInSession()

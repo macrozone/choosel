@@ -77,7 +77,7 @@ validate fields
 save Data if ok
 
 				else 
-					Solutions.insert problemID: Session.get('problemID'), title: title, description: description
+					Solutions.insert problemID: Session.get('problemID'), title: title, description: description, userID: Meteor.userId()
 
 do not forget to empty the fields after saving
 				

@@ -35,7 +35,7 @@ store these weights to the criterias
 
 				$(element).on "slide", (event, ui) =>
 					$(this.find(".label")).text ui.value
-					criteria.update {_id: criterium._id}, $set: weight: ui.value
+					Criteria.update {_id: criterium._id}, $set: weight: ui.value
 
 					
 		

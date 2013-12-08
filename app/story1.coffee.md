@@ -63,7 +63,7 @@ validate fields
 save Data if ok
 
 				else 
-					Problems.insert title: title, description: description
+					Problems.insert title: title, description: description, userID: Meteor.userId()
 
 empty the fields afterwards
 				

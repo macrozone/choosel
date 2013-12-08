@@ -14,3 +14,7 @@ jquery-ui
 jquery-ui-bootstrap
 bootstrap
 stylus
+accounts-ui
+accounts-password
+accounts-facebook
+accounts-google

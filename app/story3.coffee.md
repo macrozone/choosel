@@ -34,14 +34,10 @@ Erwartetes Ergebnis: Bewertungskriterien des Problems sind in jeder Lösung sich
 
 store criterias
 
-criterias can be volatile for the moment, we do not have to store them in a collection.
-But we should store them in Session.
+criterias are no longer volatile anymore, so the collection is now defined in [story0](story0.coffee.md)
 
-create a local criteria collection
 
-		@criteria = new Meteor.Collection
-		
-
+	
 
 ## Task
 
@@ -54,7 +50,7 @@ create new template or page where a visitor set his criterias
 			'/problem/:_id/criteria': to: 'criteriaPage', before: initCriteriaPage
 
 			Template.criteriaList.criteria = ->
-				criteria.find {problemID: Session.get "problemID"}
+				Criteria.find {problemID: Session.get "problemID", userID: Meteor.userId()}
 
 			Template.addCriteria.events =
 				"click .save": ->
@@ -66,8 +62,8 @@ validate
 						alert "please set a name for the criterium"
 					else
 
-						criterium = title: title, weight: 5, problemID: Session.get "problemID"
-						criteria.insert criterium
+						criterium = title: title, weight: 5, problemID: Session.get "problemID", userID: Meteor.userId()
+						Criteria.insert criterium
 						$(".addCriteria .criteria").val ""
 
 

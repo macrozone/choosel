@@ -26,8 +26,24 @@
 
 
 	<div class="container">
-	
+		{{#if currentUser}}
 		{{{yield}}}
+		{{else}}
+		{{>notLoggedIn}}
+		{{/if}}
 	</div>
 </template>
 
+<template name="notLoggedIn">
+	<div class="hero-unit">
+		<h1>Choosel</h1>
+		<p>A Decision Making Tool</p>
+		
+	</div>
+	<div class="alert alert-error">
+	<h4><i class="icon-lock"></i> Please sign in to use this app</h4>
+	</div>
+	<i class="signIn-hint"></i>
+	
+
+</template>

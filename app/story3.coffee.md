@@ -50,7 +50,8 @@ create new template or page where a visitor set his criterias
 			'/problem/:_id/criteria': to: 'criteriaPage', before: initCriteriaPage
 
 			Template.criteriaList.criteria = ->
-				Criteria.find {problemID: Session.get "problemID", userID: Meteor.userId()}
+
+				Criteria.find {problemID: Session.get("problemID"), userID: Meteor.userId()}
 
 			Template.addCriteria.events =
 				"click .save": ->
@@ -61,11 +62,9 @@ validate
 					if title.length <= 0
 						alert "please set a name for the criterium"
 					else
-
-						criterium = title: title, weight: 5, problemID: Session.get "problemID", userID: Meteor.userId()
+						criterium = title: title, weight: 5, userID: Meteor.userId(), problemID: Session.get "problemID"
 						Criteria.insert criterium
 						$(".addCriteria .criteria").val ""
-
 
 ## Task 
 

@@ -155,7 +155,6 @@ we have now users, we create a new Ratings collection
 			"click .save": ->
 
 				currentSolution = Solutions.findOne _id: Session.get "solutionID"
-				solutionsRated = Session.get "solutionsRated"
 				score = Math.round Session.get "totalScore"
 
 check if this rating was already set

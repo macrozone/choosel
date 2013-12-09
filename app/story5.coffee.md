@@ -71,7 +71,7 @@ from [story3](story3.coffee.md) and [story4](story4.coffee.md))
 
 
 		Template.criteriaListWithRatings.criteria = ->
-			Criteria.find {problemID: Session.get "problemID", userID: Meteor.userId()}
+			Criteria.find {problemID: Session.get("problemID"), userID: Meteor.userId()}
 
 
 ## Task

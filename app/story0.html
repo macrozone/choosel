@@ -27,14 +27,14 @@
 
 	<div class="container">
 		{{#if currentUser}}
-		{{{yield}}}
+			{{{yield}}}
 		{{else}}
-		{{>notLoggedIn}}
+			{{>notLoggedInScreen}}
 		{{/if}}
 	</div>
 </template>
 
-<template name="notLoggedIn">
+<template name="notLoggedInScreen">
 	<div class="hero-unit">
 		<h1>Choosel</h1>
 		<p>A Decision Making Tool</p>

@@ -39,10 +39,20 @@ we need this system also to keep track which user added which solution, this nee
 
 ## Task 
 
-prevent non-logged-in users from editing stuff
+~~prevent non-logged-in users from editing stuff~~
+
+-> very easy to be done, in story0.html:
+{{#if currentUser}}
+	{{{yield}}}
+{{else}}
+	{{>notLoggedInScreen}}
+{{/if}}
+
+
 
 ## Task
 
 ~~Accosiate every rating to a user~~
 
+-> done in story5
 

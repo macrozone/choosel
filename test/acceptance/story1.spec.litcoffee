@@ -22,10 +22,10 @@ jasmines waitsFor can block the code until the driver is defined
 		beforeEach -> runs -> waitsFor -> driver = loadDriver()
 
 
-
 the tests itself, that describe this story
 
 		it "allows a user to sign in", (done) ->
+		
 			driver.findElement(webdriver.By.id("login-buttons")).click().then ->
 				driver.findElement(webdriver.By.id("login-email")).sendKeys "foo@example.com"
 				driver.findElement(webdriver.By.id("login-password")).sendKeys "bar"
@@ -35,7 +35,6 @@ the tests itself, that describe this story
 						done()
 			
 	
-
 		it "is has empty problem list first", (done) ->
 			checkListContent().then (content) ->
 				expect(content.length).toBe 0

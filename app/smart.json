@@ -2,6 +2,7 @@
   "packages": {
     "mini-pages": {},
     "jquery-ui": {},
-    "jquery-ui-bootstrap": {}
+    "jquery-ui-bootstrap": {},
+    "accounts-ui-bootstrap-dropdown": {}
   }
 }

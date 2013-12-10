@@ -10,9 +10,14 @@ Als Problemsteller möchte ich sehen, wie die einzelnen Varianten bewertet wurde
 
 ## Task
 
-add total score to the solutions somewhere
+~~add total score to the solutions somewhere~~
+
+-> added in story2
+
 
 ## Task
 
-add number of scores set
+~~add number of scores set~~
+
+-> added in story2
 

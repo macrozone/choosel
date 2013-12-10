@@ -6,6 +6,7 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
     request = require('request')
 
     driver = false
+    browserName = 'firefox'
 
 
     deleteWebdriverSession = (sessionId) ->
@@ -46,17 +47,17 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
         deferred = webdriver.promise.defer()
 
         if sessions.length == 0
-            driver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: 'chrome'
+            driver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: browserName
             driver.manage().timeouts().setScriptTimeout 2000
             driver.manage().timeouts().implicitlyWait 2000
             deferred.resolve driver
 
         else
-            tempDriver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: 'chrome', sessions[0].id
+            tempDriver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: browserName, sessions[0].id
             getWebdriverSessionStatus(sessions[0].id).then (status)->
                 if status != 200
                     deleteWebdriverSessions sessions
-                    tempDriver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: 'chrome'
+                    tempDriver = require('../rtd/webdrivers/selenium-server.js') webdriver, browserName: browserName
 
                 tempDriver.manage().timeouts().setScriptTimeout 2000
                 tempDriver.manage().timeouts().implicitlyWait 2000

@@ -32,11 +32,21 @@
 	<ol>
 		{{#each solutions}}
 		
-		{{#if userRating}}
-			<li>{{>solutionLink this}} <em>, your rating:</em> <span class="badge badge-success">{{userRating}}</span></li>
-		{{else}}
-			<li>{{>solutionLink this}}</li>
-		{{/if}}
+		
+			<li>{{>solutionLink this}} 
+			{{#if userRating}}
+				<em>, your rating:</em> <span class="badge badge-success">{{userRating}}</span>
+			{{/if}}
+			{{#if numberOfRatings}}
+				<em>, Ratings total:</em> <span class="badge badge-success">{{numberOfRatings}}</span>
+			{{/if}}
+				{{#if avgScore}}
+				<em>, avarage score:</em> <span class="badge badge-important">{{avgScore}}</span>
+			{{/if}}
+			</li>
+	
+			
+		
 	
 
 		{{/each}}

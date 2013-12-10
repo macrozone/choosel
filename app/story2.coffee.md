@@ -56,9 +56,21 @@ add already rated solution-scores from story5
 			
 			solutions = []
 			cursor.forEach (solution)->
-				rating = Ratings.findOne solutionID: solution._id, userID: Meteor.userId()
-				if rating?
-					solution.userRating = rating.score
+
+				ratingsCursor = Ratings.find {solutionID: solution._id}
+				scoreTotal = 0
+				numberOfRatings = ratingsCursor.count()
+				ratingsCursor.forEach (rating) ->
+					scoreTotal += rating.score
+					if rating.userID == Meteor.userId()
+						solution.userRating = rating.score
+
+
+				if numberOfRatings > 0
+					solution.numberOfRatings = numberOfRatings
+					solution.avgScore = scoreTotal / numberOfRatings
+				
+				
 				solutions.push solution
 			return solutions
 

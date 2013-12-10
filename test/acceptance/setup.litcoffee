@@ -6,7 +6,7 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
     request = require('request')
 
     driver = false
-    browserName = 'firefox'
+    browserName = 'chrome'
 
 
     deleteWebdriverSession = (sessionId) ->

@@ -72,7 +72,9 @@ add already rated solution-scores from story5
 				
 				
 				solutions.push solution
-			return solutions
+			sortByScore = (solution) -> 
+				-solution.avgScore
+			return _.sortBy solutions, sortByScore
 
 on save click...
 

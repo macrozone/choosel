@@ -12,6 +12,7 @@ Current state: http://choosel.macrozone.ch/
 Meteor is still in development, we are now on 0.7.0.1 (started with 0.6.6.3).
 
 ### Patterns / Techniques / Libraries
+- [Handlebars](http://handlebarsjs.com/), Meteor's default template-language. We use some self-made helper functions to do some simple control flows in the templates
 - [JS promises](http://blog.parse.com/2013/01/29/whats-so-great-about-javascript-promises/) heavenly used in the acceptance-tests. Allows to chain async functions in a more readable way
 - [bootstrap](http://getbootstrap.com/), a front-end-framework, that covers a lot of styling.
 - [stylus](http://learnboost.github.io/stylus/), a css-precompiler, that looks and feels similar to coffescript. 

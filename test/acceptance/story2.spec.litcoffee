@@ -2,8 +2,9 @@
 
 load setup code
 
-	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
+	{loadDriver:loadDriver, webdriver: webdriver, helpers: helpers} = require "./setup"
 	Constants = require "./constants"
+
 the tests
 
 
@@ -14,15 +15,15 @@ the tests
 		it "allows user to open a page for a problem", (done) ->
 			element = driver.findElement(webdriver.By.className('problemList'))
 			element.findElement(webdriver.By.tagName("a")).click().then ->
-				getTitleOfProblemPage().then (title) ->
-					expect(title).toBe "my problem"
+				helpers.getTitleOfProblemPage(driver).then (title) ->
+					expect(title).toBe Constants.PROBLEM_TITLE
 					done()
 
 		it "allows a user to add a solution for a problem", (done) ->
-			createSolution().then done
+			helpers.createSolution(driver, Constants.SOLUTION_TITLE, Constants.SOLUTION_DESCRIPTION).then done
 
 		it "has an empty form when a solution is saved", (done) ->
-			solutionContainer = getSolutionContainer()
+			solutionContainer = helpers.getSolutionCreateContainer driver
 			
 			solutionContainer.findElement(webdriver.By.className('title')).getAttribute("value").then (title) ->
 				expect(title).toBe ""
@@ -30,24 +31,3 @@ the tests
 					expect(description).toBe ""
 					done()
 
-helper functions
-
-		getSolutionContainer = ->
-			driver.findElement(webdriver.By.className("addSolution"))
-
-		getTitleOfProblemPage = ->
-			deferred = webdriver.promise.defer();
-			driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
-			deferred.promise
-
-		createSolution = ->
-			deferred = webdriver.promise.defer();
-			solutionTitle = "my solution"
-			solutionDescription = "this is a solution for the problem"
-			solutionContainer = getSolutionContainer()
-			
-			solutionContainer.findElement(webdriver.By.className('title')).sendKeys Constants.SOLUTION_TITLE
-			solutionContainer.findElement(webdriver.By.className('description')).sendKeys Constants.SOLUTION_DESCRIPTION
-			solutionContainer.findElement(webdriver.By.className("save")).click()
-			deferred.resolve()
-			deferred.promise

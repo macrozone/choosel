@@ -4,6 +4,7 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
 
     webdriver = require 'selenium-webdriver'
     request = require('request')
+    Constants = require "./constants"
 
     driver = false
     browserName = 'chrome'
@@ -95,11 +96,52 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
 
     initDriver()
 
-    loadDriver = ->
+    loadDriver = -> driver
 
-        driver
+
+some reusable helper functions
+
+  
+    createNewProblem = (driver, title, description) ->
+        deferred = webdriver.promise.defer()
+        driver.findElement(webdriver.By.className('title')).sendKeys title
+        driver.findElement(webdriver.By.className('description')).sendKeys description
+        driver.findElement(webdriver.By.className("save")).click().then deferred.resolve
+        deferred.promise
+
+    checkListContent = (driver, classname) ->
+        deferred = webdriver.promise.defer()
+       
+        driver.findElement(webdriver.By.className(classname)).getText().then deferred.resolve
+        deferred.promise
+
+    getSolutionCreateContainer = (driver)->
+        driver.findElement(webdriver.By.className("addSolution"))
+
+    getTitleOfProblemPage = (driver)->
+        deferred = webdriver.promise.defer();
+        driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
+        deferred.promise
+
+    createSolution = (driver, title, description)->
+        deferred = webdriver.promise.defer();
+        solutionContainer = getSolutionCreateContainer driver
+        
+        solutionContainer.findElement(webdriver.By.className('title')).sendKeys title
+        solutionContainer.findElement(webdriver.By.className('description')).sendKeys description
+        solutionContainer.findElement(webdriver.By.className("save")).click()
+       
+        deferred.resolve()
+        deferred.promise
+
 
     module.exports = 
+        helpers: 
+            checkListContent: checkListContent
+            createNewProblem: createNewProblem
+            getSolutionCreateContainer: getSolutionCreateContainer
+            getTitleOfProblemPage: getTitleOfProblemPage
+            createSolution: createSolution
         loadDriver: loadDriver
         webdriver: webdriver
 

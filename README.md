@@ -75,7 +75,9 @@ If you need to adjust code in story 0, add a commet in your story card.
 
 #### [story 8](app/story8.coffee.md) 
 
-more (all) stories will be put here later.
+#### [story 9](app/story9.coffee.md) 
+
+#### [story 10](app/story10.coffee.md) 
 
 
 ### additional assets
@@ -130,7 +132,7 @@ We will add such a system in one of the next Iterations.
 
 3. Install `nodejs-legacy`, if haven't it, because `mrt` needs it to run correct
 
-4. `$ cd choosel/src`
+4. `$ cd choosel/app`
 
 5. execute `$ mrt` to install the needed packages
 

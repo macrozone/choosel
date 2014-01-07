@@ -2,7 +2,7 @@
 
 load setup code
 
-	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
+	{loadDriver:loadDriver, webdriver: webdriver, helpers: helpers} = require "./setup"
 	Constants = require "./constants"
 
 the tests
@@ -19,13 +19,10 @@ Erwartetes Ergebnis: User sieht liste seiner gestarteten Probleme
 
 		it "allows user to see the problem he started in a list", (done) ->
 
-			checkListContent = ->
-				deferred = webdriver.promise.defer()
-				driver.findElement(webdriver.By.className('myproblemList')).getText().then deferred.resolve
-				deferred.promise
+		
 
 			driver.navigate().to("http://localhost:8000/").then ->
-				checkListContent().then (content) ->
+				helpers.checkListContent(driver, "myproblemList").then (content) ->
 					expect(content.length).toBeGreaterThan 0
 					done()
 

@@ -101,18 +101,18 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
 
 some reusable helper functions
 
-    createNewProblem = (driver) ->
-        deferred = webdriver.promise.defer();
-        problemTitle = Constants.PROBLEM_TITLE
-        problemDescription = Constants.PROBLEM_DESCRIPTION
-        driver.findElement(webdriver.By.className('title')).sendKeys problemTitle
-        driver.findElement(webdriver.By.className('description')).sendKeys problemDescription
+  
+    createNewProblem = (driver, title, description) ->
+        deferred = webdriver.promise.defer()
+        driver.findElement(webdriver.By.className('title')).sendKeys title
+        driver.findElement(webdriver.By.className('description')).sendKeys description
         driver.findElement(webdriver.By.className("save")).click().then deferred.resolve
         deferred.promise
 
     checkListContent = (driver, classname) ->
         deferred = webdriver.promise.defer()
-        driver.findElement(webdriver.By.className(classname).getText().then deferred.resolve
+       
+        driver.findElement(webdriver.By.className(classname)).getText().then deferred.resolve
         deferred.promise
 
     getSolutionContainer = (driver)->
@@ -123,15 +123,14 @@ some reusable helper functions
         driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
         deferred.promise
 
-    createSolution = (driver)->
+    createSolution = (driver, title, description)->
         deferred = webdriver.promise.defer();
-        solutionTitle = "my solution"
-        solutionDescription = "this is a solution for the problem"
         solutionContainer = getSolutionContainer driver
         
-        solutionContainer.findElement(webdriver.By.className('title')).sendKeys Constants.SOLUTION_TITLE
-        solutionContainer.findElement(webdriver.By.className('description')).sendKeys Constants.SOLUTION_DESCRIPTION
+        solutionContainer.findElement(webdriver.By.className('title')).sendKeys title
+        solutionContainer.findElement(webdriver.By.className('description')).sendKeys description
         solutionContainer.findElement(webdriver.By.className("save")).click()
+       
         deferred.resolve()
         deferred.promise
 

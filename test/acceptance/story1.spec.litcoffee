@@ -44,7 +44,7 @@ the tests itself, that describe this story
 				done()
 
 		it "lets a user create a new problem that is saved", (done) ->
-			helpers.createNewProblem(driver).then ->
+			helpers.createNewProblem(driver, Constants.PROBLEM_TITLE, Constants.PROBLEM_DESCRIPTION).then ->
 				helpers.checkListContent(driver, "problemList").then (content) ->
 					expect(content.length).toBeGreaterThan 0
 					done()

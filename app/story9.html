@@ -1,0 +1,13 @@
+<!-- HTML Template for Story 9 -->
+
+<template name="myProblems">
+        <h2>My problems</h2>
+        <ul class="myproblemList">
+                {{#each problems}}
+                <li>
+                        <a href="/problem/{{_id}}/">{{title}}</a>
+                </li>
+                {{/each}}
+        </ul>
+</template>
+

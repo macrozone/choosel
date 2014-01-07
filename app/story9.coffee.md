@@ -31,17 +31,18 @@ Erwartetes Ergebnis: Lösung mit höchstem Score ist zuoberst.
 let user that created problems see all problems that he started ("my problems")
 create a new section on the front page for that
 
-		Template.myProblems.problems = ->
-                        Problems.find(userID:Meteor.userId())
+	Template.myProblems.problems = ->
+		Problems.find(userID:Meteor.userId())
 
 
 ## Task
 
-sort by rating score of the solutions so that top solution is on top of the list
-
+~~sort by rating score of the solutions so that top solution is on top of the list~~
+-> added in story2
 
 ## Task
 
-Highlight the top solution with a appropriate color or similar
+~~Highlight the top solution with a appropriate color or similar~~
+-> added in story2
 
 

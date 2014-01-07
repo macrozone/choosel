@@ -39,10 +39,55 @@ we first navigate into a problem. let's take the users problem here
 
 			element = driver.findElement(webdriver.By.className('myproblemList'))
 			element.findElement(webdriver.By.tagName("a")).click().then ->
-				done()
+
+create another solution here
+				
+				helpers.createSolution(driver, Constants.SOLUTION_2_TITLE, Constants.SOLUTION_2_DESCRIPTION).then ->
 				
 now search the solution list
 
+				list = driver.findElement(webdriver.By.tagName("ol"))
+				elements = list.findElements(webdriver.By.tagName("li")).then (elements) ->
+					ratingList = []
+
+					onComplete = ->
+
+check if first entry has the highest rating
+						
+						max = 0
+						maxIndex = 0
+						for rating, index in ratingList
+							if rating > max
+								max = rating
+								maxIndex = index
+
+						expect(maxIndex).toBe 0
+						done()
+						
+					checkIfComplete = ->
+						if ratingList.length == elements.length
+							onComplete()
+
+					for element, index in elements
+						do (index) ->
+						
+careful, when calling async functions in a sync for-loop: 
+the index-var is defined in the enclosing scope of all the 
+callbacks. with "do (index) -> " we gat an inner scope
+
+							
+							element.findElements(webdriver.By.className("avgRating")).then (ratingElements) ->
+								if ratingElements.length > 0
+
+									ratingElements[0].getText().then (rating) ->
+										ratingList[index] = parseInt rating, 10
+										checkIfComplete()
+								else
+									ratingList[index] = 0
+									checkIfComplete()
+
+
+					
 
 
 		

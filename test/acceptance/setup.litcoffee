@@ -115,7 +115,7 @@ some reusable helper functions
         driver.findElement(webdriver.By.className(classname)).getText().then deferred.resolve
         deferred.promise
 
-    getSolutionContainer = (driver)->
+    getSolutionCreateContainer = (driver)->
         driver.findElement(webdriver.By.className("addSolution"))
 
     getTitleOfProblemPage = (driver)->
@@ -125,7 +125,7 @@ some reusable helper functions
 
     createSolution = (driver, title, description)->
         deferred = webdriver.promise.defer();
-        solutionContainer = getSolutionContainer driver
+        solutionContainer = getSolutionCreateContainer driver
         
         solutionContainer.findElement(webdriver.By.className('title')).sendKeys title
         solutionContainer.findElement(webdriver.By.className('description')).sendKeys description
@@ -139,7 +139,7 @@ some reusable helper functions
         helpers: 
             checkListContent: checkListContent
             createNewProblem: createNewProblem
-            getSolutionContainer: getSolutionContainer
+            getSolutionCreateContainer: getSolutionCreateContainer
             getTitleOfProblemPage: getTitleOfProblemPage
             createSolution: createSolution
         loadDriver: loadDriver

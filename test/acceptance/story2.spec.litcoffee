@@ -23,7 +23,7 @@ the tests
 			helpers.createSolution(driver, Constants.SOLUTION_TITLE, Constants.SOLUTION_DESCRIPTION).then done
 
 		it "has an empty form when a solution is saved", (done) ->
-			solutionContainer = helpers.getSolutionContainer driver
+			solutionContainer = helpers.getSolutionCreateContainer driver
 			
 			solutionContainer.findElement(webdriver.By.className('title')).getAttribute("value").then (title) ->
 				expect(title).toBe ""

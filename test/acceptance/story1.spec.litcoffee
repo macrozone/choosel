@@ -2,7 +2,7 @@
 
 load setup code
 
-	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
+	{loadDriver:loadDriver, webdriver: webdriver, helpers: helpers} = require "./setup"
 	Constants = require "./constants"
 
 ##the test
@@ -39,28 +39,12 @@ the tests itself, that describe this story
 	
 
 		it "is has empty problem list first", (done) ->
-			checkListContent().then (content) ->
+			helpers.checkListContent(driver, "problemList").then (content) ->
 				expect(content.length).toBe 0
 				done()
 
 		it "lets a user create a new problem that is saved", (done) ->
-			createNewProblem().then ->
-				checkListContent().then (content) ->
+			helpers.createNewProblem(driver, Constants.PROBLEM_TITLE, Constants.PROBLEM_DESCRIPTION).then ->
+				helpers.checkListContent(driver, "problemList").then (content) ->
 					expect(content.length).toBeGreaterThan 0
 					done()
-		
-some helper functions. 
-
-		createNewProblem = ->
-			deferred = webdriver.promise.defer();
-			problemTitle = Constants.PROBLEM_TITLE
-			problemDescription = Constants.PROBLEM_DESCRIPTION
-			driver.findElement(webdriver.By.className('title')).sendKeys problemTitle
-			driver.findElement(webdriver.By.className('description')).sendKeys problemDescription
-			driver.findElement(webdriver.By.className("save")).click().then deferred.resolve
-			deferred.promise
-
-		checkListContent = ->
-			deferred = webdriver.promise.defer()
-			driver.findElement(webdriver.By.className('problemList')).getText().then deferred.resolve
-			deferred.promise

@@ -4,3 +4,7 @@ module.exports =
 	SOLUTION_TITLE: "my solution"
 	SOLUTION_DESCRIPTION: "a solution for my problem"
 	CRITERIUM: "a criterium"
+
+	SOLUTION_2_TITLE: "another solution"
+	SOLUTION_2_DESCRIPTION: "this is another solution for the same problem"
+	

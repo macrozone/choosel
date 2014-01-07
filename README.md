@@ -8,6 +8,16 @@ Current state: http://choosel.macrozone.ch/
 
 ## What's new?
 
+### Meteor update
+Meteor is still in development, we are now on 0.7.0.1 (started with 0.6.6.3).
+
+### Patterns / Techniques / Libraries
+- [JS promises](http://blog.parse.com/2013/01/29/whats-so-great-about-javascript-promises/) heavenly used in the acceptance-tests. Allows to chain async functions in a more readable way
+- [bootstrap](http://getbootstrap.com/), a front-end-framework, that covers a lot of styling.
+- [stylus](http://learnboost.github.io/stylus/), a css-precompiler, that looks and feels similar to coffescript. 
+- [underscore](http://underscorejs.org/) Coffescript brings a lot of syntactic sugar into javascript - for everything else, there is underscore
+- [coffescript](http://coffeescript.org/), was there from the beginning of this project, just to complete this list here.
+
 ### RTD as Testframework
 - now uses [RTD](http://xolvio.github.io/rtd/) for unittests and acceptance tests
 - has now some first acceptance tests, see [story1.spec](test/acceptance/story1.spec.litcoffee),  [story2.spec](test/acceptance/story2.spec.litcoffee), etc. (currently the extension is litcoffee not coffee.md, coffee.md seems not to be recognized as testfiles yet)
@@ -19,6 +29,7 @@ Current state: http://choosel.macrozone.ch/
 
 ### User Logins
 you can now login with facebook, google or GitHub, or you can create a new email-based login
+
 
 ## "Literate-Story-Programming"
 

@@ -6,8 +6,17 @@ Als Problemsteller möchte ich vom System wissen, welche Lösungsvariante am bes
 
 **Schätzung:** 8
 
-## Task
-
-sort by rating score of the solutions
 
 	
+## Task
+
+let user that created problems see all problems that he started ("my problems")
+create a new section on the front page for that
+
+
+## Task
+
+sort by rating score of the solutions so that top solution is on top of the list
+
+
+

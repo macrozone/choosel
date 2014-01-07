@@ -37,11 +37,12 @@ create a new section on the front page for that
 
 ## Task
 
-sort by rating score of the solutions so that top solution is on top of the list
-
+~~sort by rating score of the solutions so that top solution is on top of the list~~
+-> added in story2
 
 ## Task
 
-Highlight the top solution with a appropriate color or similar
+~~Highlight the top solution with a appropriate color or similar~~
+-> added in story2
 
 

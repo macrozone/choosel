@@ -54,7 +54,9 @@ Erwartetes Ergebnis: Popup erscheint mit Meldung, dass kein Titel bzw. Beschreib
 			"click .save": ->
 				title = $(".createProblem .title").val()
 				description = $(".createProblem .description").val()
-				enddate = $(".createProblem .enddate").val()
+				enddate = new Date($(".createProblem .enddate").val()).getTime()
+
+				if enddate > 0 then enddate /=1000 else enddate = undefined
 
 validate fields
 
@@ -64,12 +66,13 @@ validate fields
 save Data if ok
 
 				else 
-					Problems.insert title: title, description: description, userID: Meteor.userId()
+					Problems.insert title: title, description: description, userID: Meteor.userId(), enddate: enddate
 
 empty the fields afterwards
 				
 					$(".createProblem .title").val ""
 					$(".createProblem .description").val ""
+					$(".createProblem .enddate").val ""
 
 
 		Template.allProblems.problems = ->

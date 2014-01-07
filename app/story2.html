@@ -4,10 +4,17 @@
 <template name="problemPage">
 <a href="/" class="btn btn-small"><i class="icon-arrow-left"></i>Home</a>
 	{{>problemSnippet}}
+	{{#if problemHasExpired}}
+	{{else}}
 	<a href="criteria/">Edit your criteria</a>
+	{{/if}}
 
 	{{>solutions}}
-	{{>addSolution}}
+	{{#if problemHasExpired}}
+		<p>problem has been expired, you can't edit anymore</p>
+	{{else}}
+		{{>addSolution}}
+	{{/if}}
 
 </template>
 
@@ -24,12 +31,17 @@
 </template>
 
 <template name="solutionLink">
-<a href="./solutions/{{_id}}">{{title}}</a>: {{description}}
+{{#if problemHasExpired}}
+	{{title}}: {{description}}
+{{else}}
+	<a href="./solutions/{{_id}}">{{title}}</a>: {{description}}
+{{/if}}
+
 </template>
 
 <template name="solutions">
 	<h2>Solutions:</h2>
-	<ol>
+	<ol class="solutionList">
 		{{#each solutions}}
 		
 		

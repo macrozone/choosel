@@ -134,7 +134,6 @@ some reusable helper functions
         deferred.resolve()
         deferred.promise
 
-
     module.exports = 
         helpers: 
             checkListContent: checkListContent

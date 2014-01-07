@@ -6,6 +6,19 @@ Als Problemsteller möchte ich vom System wissen, welche Lösungsvariante am bes
 
 **Schätzung:** 8
 
+## Akzeptanzkriterien:
+
+**Kriterium "Schnellzugriff auf Probleme des users"**
+Situation: User möchte die Lösungen für **seine** gestarteten Probleme sehen
+Aktion: User ist auf Homepage
+Erwartetes Ergebnis: User sieht liste seiner gestarteten Probleme
+
+
+**Kriterium "Top Lösung"**
+Situation: User möchte sofort sehen, welche Lösung zu seinem Problem am besten abgeschnitten hat
+Aktion: User klickt auf ein Problem
+Erwartetes Ergebnis: Lösung mit höchstem Score ist zuoberst.
+
 
 	
 ## Task
@@ -18,5 +31,9 @@ create a new section on the front page for that
 
 sort by rating score of the solutions so that top solution is on top of the list
 
+
+## Task
+
+Highlight the top solution with a appropriate color or similar
 
 

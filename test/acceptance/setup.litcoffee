@@ -4,6 +4,7 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
 
     webdriver = require 'selenium-webdriver'
     request = require('request')
+    Constants = require "./constants"
 
     driver = false
     browserName = 'chrome'
@@ -95,11 +96,53 @@ this file is inspired by [a sample from the rtd-github-repo](https://github.com/
 
     initDriver()
 
-    loadDriver = ->
+    loadDriver = -> driver
 
-        driver
+
+some reusable helper functions
+
+    createNewProblem = (driver) ->
+        deferred = webdriver.promise.defer();
+        problemTitle = Constants.PROBLEM_TITLE
+        problemDescription = Constants.PROBLEM_DESCRIPTION
+        driver.findElement(webdriver.By.className('title')).sendKeys problemTitle
+        driver.findElement(webdriver.By.className('description')).sendKeys problemDescription
+        driver.findElement(webdriver.By.className("save")).click().then deferred.resolve
+        deferred.promise
+
+    checkListContent = (driver, classname) ->
+        deferred = webdriver.promise.defer()
+        driver.findElement(webdriver.By.className(classname).getText().then deferred.resolve
+        deferred.promise
+
+    getSolutionContainer = (driver)->
+        driver.findElement(webdriver.By.className("addSolution"))
+
+    getTitleOfProblemPage = (driver)->
+        deferred = webdriver.promise.defer();
+        driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
+        deferred.promise
+
+    createSolution = (driver)->
+        deferred = webdriver.promise.defer();
+        solutionTitle = "my solution"
+        solutionDescription = "this is a solution for the problem"
+        solutionContainer = getSolutionContainer driver
+        
+        solutionContainer.findElement(webdriver.By.className('title')).sendKeys Constants.SOLUTION_TITLE
+        solutionContainer.findElement(webdriver.By.className('description')).sendKeys Constants.SOLUTION_DESCRIPTION
+        solutionContainer.findElement(webdriver.By.className("save")).click()
+        deferred.resolve()
+        deferred.promise
+
 
     module.exports = 
+        helpers: 
+            checkListContent: checkListContent
+            createNewProblem: createNewProblem
+            getSolutionContainer: getSolutionContainer
+            getTitleOfProblemPage: getTitleOfProblemPage
+            createSolution: createSolution
         loadDriver: loadDriver
         webdriver: webdriver
 

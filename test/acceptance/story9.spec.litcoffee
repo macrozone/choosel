@@ -37,7 +37,16 @@ Erwartetes Ergebnis: Lösung mit höchstem Score ist zuoberst.
 
 
 		it "shows the top solution of a problem on top of the list of all solutions", (done) ->
-			done()
+			
+we first navigate into a problem. let's take the users problem here
+
+			element = driver.findElement(webdriver.By.className('myproblemList'))
+			element.findElement(webdriver.By.tagName("a")).click().then ->
+				done()
+				
+now search the solution list
+
+
 
 		
 

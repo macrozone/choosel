@@ -3,7 +3,7 @@
 load setup code
 
 	{loadDriver:loadDriver, webdriver: webdriver} = require "./setup"
-	Constants = require "./constants"
+
 the tests
 
 
@@ -22,7 +22,7 @@ the tests
 			createSolution().then done
 
 		it "has an empty form when a solution is saved", (done) ->
-			solutionContainer = getSolutionContainer()
+			solutionContainer = helpers.getSolutionContainer driver
 			
 			solutionContainer.findElement(webdriver.By.className('title')).getAttribute("value").then (title) ->
 				expect(title).toBe ""
@@ -30,24 +30,3 @@ the tests
 					expect(description).toBe ""
 					done()
 
-helper functions
-
-		getSolutionContainer = ->
-			driver.findElement(webdriver.By.className("addSolution"))
-
-		getTitleOfProblemPage = ->
-			deferred = webdriver.promise.defer();
-			driver.findElement(webdriver.By.tagName "h3").getText().then deferred.resolve
-			deferred.promise
-
-		createSolution = ->
-			deferred = webdriver.promise.defer();
-			solutionTitle = "my solution"
-			solutionDescription = "this is a solution for the problem"
-			solutionContainer = getSolutionContainer()
-			
-			solutionContainer.findElement(webdriver.By.className('title')).sendKeys Constants.SOLUTION_TITLE
-			solutionContainer.findElement(webdriver.By.className('description')).sendKeys Constants.SOLUTION_DESCRIPTION
-			solutionContainer.findElement(webdriver.By.className("save")).click()
-			deferred.resolve()
-			deferred.promise

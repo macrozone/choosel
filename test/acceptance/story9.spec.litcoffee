@@ -73,12 +73,10 @@ check if first entry has the highest rating
 						
 careful, when calling async functions in a sync for-loop: 
 the index-var is defined in the enclosing scope of all the 
-callbacks. with "do (index) -> " we gat an inner scope
-
+callbacks. with "do (index) -> " we get an inner scope
 							
 							element.findElements(webdriver.By.className("avgRating")).then (ratingElements) ->
 								if ratingElements.length > 0
-
 									ratingElements[0].getText().then (rating) ->
 										ratingList[index] = parseInt rating, 10
 										checkIfComplete()

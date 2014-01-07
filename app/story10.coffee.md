@@ -15,4 +15,8 @@ add a date field to the problem creation form for termination and store this dat
 
 ## Task 
 
-if date is in past, 
+if date is in past, user can't add solutions anymore
+
+## Task
+
+if date is in past, user can't rate solutions anymore

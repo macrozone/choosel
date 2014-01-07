@@ -13,10 +13,9 @@ um Planungssicherheit zu haben.
 
 add a date field to the problem creation form for termination and store this date to the problem
 
+--> add field in story1
+
 ## Task 
 
 if date is in past, user can't add solutions anymore
 
-## Task
-
-if date is in past, user can't rate solutions anymore

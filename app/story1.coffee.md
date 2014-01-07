@@ -54,6 +54,7 @@ Erwartetes Ergebnis: Popup erscheint mit Meldung, dass kein Titel bzw. Beschreib
 			"click .save": ->
 				title = $(".createProblem .title").val()
 				description = $(".createProblem .description").val()
+				enddate = $(".createProblem .enddate").val()
 
 validate fields
 

@@ -31,8 +31,8 @@ Erwartetes Ergebnis: Lösung mit höchstem Score ist zuoberst.
 let user that created problems see all problems that he started ("my problems")
 create a new section on the front page for that
 
-	Template.myProblems.problems = ->
-		Problems.find(userID:Meteor.userId())
+		Template.myProblems.problems = ->
+			Problems.find(userID:Meteor.userId())
 
 
 ## Task

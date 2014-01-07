@@ -73,7 +73,7 @@ add already rated solution-scores from story5
 				
 				solutions.push solution
 			sortByScore = (solution) -> 
-				-solution.avgScore
+				if solution.avgScore? then -solution.avgScore else 0
 			return _.sortBy solutions, sortByScore
 
 on save click...
